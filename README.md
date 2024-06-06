@@ -6,15 +6,15 @@ entregado en Figma, los requerimientos técnicos y la funcionalidad deseada.
 
 1. En primer lugar, es necesario entrar al [link](https://www.figma.com/file/ptZy1a106K1UbSFh1O4v93/Food-store-template-(Community)?node-id=0%3A1) donde se encuentra el diseño.
 2. El diseño propuesto es flexible y está sujeto a cambios y mejoras. No obstante, hay ciertos requerimientos que deben ser respetados:
-     ◦ Layout.
-     ◦ Dimensiones y posicionamiento de los elementos en la página (menú superior, carrito de compras a la derecha, logo a la izquierda, imagen de bienvenida de fondo, etc).
+   * Layout.
+   * Dimensiones y posicionamiento de los elementos en la página (menú superior, carrito de compras a la derecha, logo a la izquierda, imagen de bienvenida de fondo, etc).
 4. Queda a criterio de los desarrolladores el contenido de la Homepage:
-     ◦ Las imágenes a utilizar.
-     ◦ El estilo de íconos.
-     ◦ El nombre de la empresa u organización.
-     ◦ El logo.
-     ◦ El texto.
-     ◦ La paleta de colores.
+   * Las imágenes a utilizar.
+   * El estilo de íconos.
+   * El nombre de la empresa u organización.
+   * El logo.
+   * El texto.
+   * La paleta de colores.
 
 ## Requerimientos Técnicos
 
