@@ -1,10 +1,13 @@
 import SectionCard from "../molecules/SectionCards"
+import Nav from "../organisms/Form/Nav";
+
 
 
 const index = () => {
   return (
     <main>
-     <SectionCard/>
+      <Nav />
+      <SectionCard />
     </main>
   );
 };

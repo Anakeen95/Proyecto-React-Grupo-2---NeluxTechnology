@@ -2,10 +2,17 @@
 
 import React from 'react'
 
-const Header = () => {
+const Nav = () => {
     return (
-        <div>Header</div>
+        <div>
+            <ul>
+                <li>Home</li>
+                <li>Carrito</li>
+                <li>Galeria</li>
+                <li>Productos</li>
+            </ul>
+        </div>
     )
 }
 
-export default Header
+export default Nav
