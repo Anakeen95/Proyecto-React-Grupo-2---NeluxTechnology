@@ -1,0 +1,14 @@
+.homeContainer{
+    width: 100%;
+    height: 300px; /* Altura del banner */
+    background-color: #da2929; /* Color de fondo mientras carga la imagen */
+    /*justify-content: center;*/
+    margin-bottom: 5px;
+    object-fit: contain;
+}
+.homeImg {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-color:#1D1D1B; /*ver porque me quedan esos espacios a los costados*/
+  }
