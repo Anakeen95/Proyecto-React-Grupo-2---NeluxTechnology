@@ -5,5 +5,5 @@
 
 .Redes {
     display: flex;
-    flex-direction: flex;
+    flex-direction: row;
 }
