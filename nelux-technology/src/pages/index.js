@@ -1,6 +1,6 @@
 import SectionCard from "../molecules/SectionCards"
-import Footer from "../organisms/Form/Footer";
-import Nav from "../organisms/Form/Nav";
+import Footer from "../organisms/Footer/Footer";
+import Nav from "../organisms/Nav/Nav";
 
 
 

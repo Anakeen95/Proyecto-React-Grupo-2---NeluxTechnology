@@ -1,24 +1,31 @@
 
+import React from 'react';
+import styles from './Nav.module.css'
 
-import React from 'react'
 
 const Nav = () => {
     return (
-        <div>
-            <ul class="nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+        <div className={styles.nav}>
+            <div class={styles.logo}>
+                <img src="./images/NeluxTech-Isotipo-Negro.png" alt="Logo" ></img>
+            </div>
+            <ul className={styles.navBar}>
+                <li className={styles.navBarItem}>
+                    <a className="navbar-link" href="Home">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
+                <li className={styles.navBarItem}>
+                    <a className="navbar-link" href="Productos">Products</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
+                <li className={styles.navBarItem}>
+                    <a className="navbar-link" href="Galleria">Gallery</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Contact</a>
+                <li className={styles.navBarItem}>
+                    <a className="navbar-link" href="Contacto">Contact</a>
                 </li>
             </ul>
+            <div class={styles.cartLogo}>
+                <img src="./images/Cart-Icon.png" alt="Cart-Logo" ></img>
+            </div>
         </div>
     )
 }
