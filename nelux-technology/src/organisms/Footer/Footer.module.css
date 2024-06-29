@@ -1,9 +1,46 @@
 .Footer {
     display: flex;
     flex-direction: row;
+    color: #00FDFB;
+    background-color: #1D1D1B;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
 }
 
-.Redes {
+.Seguinos {
+    margin-left: 0.5rem;
+}
+
+.Redes ul {
     display: flex;
     flex-direction: row;
+
+}
+
+.Subtitulos {
+    color: #00FDFB;
+    font-size: .9rem;
+}
+
+.Paragraph {
+    color: aliceblue;
+    font-size: .8rem
+}
+
+.itemStyle img {
+    height: 40px;
+    margin: .5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.itemStyle:hover {
+    transform: scale(1.2);
+}
+
+.logoFooter img {
+    height: 150px;
 }
