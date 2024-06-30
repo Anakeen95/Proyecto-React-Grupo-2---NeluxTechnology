@@ -23,7 +23,6 @@ const ProductCard = ({ product }) => {
            <h5 className={styles.cardTitle}>{product.name}</h5>
            <p className={styles.cardText}>{product.description}</p>
            <h4 className={styles.cardPrice}>${product.price}</h4>
-           <div className={styles.spacer}></div>
          </div>
          <div className={styles.buttonContainer}>
             <button onClick={handleButtonClick}><Button /></button>
