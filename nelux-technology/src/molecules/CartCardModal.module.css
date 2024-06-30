@@ -26,10 +26,10 @@
   }
 
 .modalbuton{
-      background-color:#007bff;
+      background-color:#1D1D1B;
       border: none; 
       border-radius: 50%; 
-      color: black; 
+      color: #00FDFB;
       width: 40px; 
       height: 40px; 
       display: flex; 
@@ -37,13 +37,17 @@
       justify-content: center; 
       font-size: 1.5rem; 
       cursor: pointer; 
-      box-shadow: 0px 1px 1px 0.5px black; 
+      box-shadow: 0px 1px 1px 0.5px #00FDFB;
       text-transform: uppercase;
       float:left;
     }
     .modalbuton:hover{
       opacity: 0.50;
       -moz-opacity: .50;
-      filter:alpha (opacity=50);
+      filter:alpha (opacity=20);
     }
   
+    .modalbuton:active {
+      background-color: #4d4b55; 
+      transform: scale(0.95); 
+     }    

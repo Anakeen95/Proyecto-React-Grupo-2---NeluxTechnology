@@ -18,14 +18,19 @@ const ProductCard = ({ product }) => {
     <>  
       <div className={styles.card}>
         <img src={product.imageUrl} alt={product.name} className={styles.img}/>
-        <div>
-          <h5 className={styles.cardTitle}>{product.name}</h5>
-          <p className={styles.cardText}>{product.description}</p>
-          <h4 className={styles.cardPrice}>${product.price}</h4>
-        </div>
-        <button onClick={handleButtonClick}><Button /></button>
+        <div className={styles.cardContent}>
+         <div>
+           <h5 className={styles.cardTitle}>{product.name}</h5>
+           <p className={styles.cardText}>{product.description}</p>
+           <h4 className={styles.cardPrice}>${product.price}</h4>
+           <div className={styles.spacer}></div>
+         </div>
+         <div className={styles.buttonContainer}>
+            <button onClick={handleButtonClick}><Button /></button>
+         </div>
+        </div>  
       </div>
-      {showModal && <Modal message="El producto se agregó al carrito!" onClose={handleCloseModal} />}
+      {showModal && <Modal message="Se agregó el producto al carrito!" onClose={handleCloseModal} />}  
     </>
   );
 };
