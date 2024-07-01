@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './BannerHome.module.css'
+import Image from 'react-bootstrap/Image'
 
 
 //const BannerHome = () => {
