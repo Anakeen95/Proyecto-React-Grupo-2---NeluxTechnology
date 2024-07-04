@@ -7,6 +7,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+   
 }
 
 /*-------------SECCION DE TODO EL CARRUSEL------------------*/
@@ -15,6 +16,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 }
 
 /*---------------TAMAÑO IMAGENES----------------*/
@@ -22,8 +24,8 @@
     width: 100%;
     height: auto;
     /*border: 0.1rem solid #ebf1f1;*/
-    border-top-right-radius: 1.7rem;
-    border-bottom-left-radius: 1.7rem
+    border-top-right-radius: 1.8rem;
+    border-bottom-left-radius: 1.8rem;
 }
 
 /*----------------------CARROUSEL SOLO-----------------------*/
@@ -32,8 +34,11 @@
     background-color: #1D1D1B;
     box-shadow: 0 4px 8px black;
     width: 100%;
-    border-top-right-radius: 1.5rem;
-    border-bottom-left-radius: 1.5rem
+    border-top-right-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
+    border-top-left-radius: 1.6rem;
+    border-bottom-right-radius:1.6rem ;
+    margin: 1rem;
 }
 
 /*----------------------TEXT-----------------------*/
@@ -52,5 +57,11 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
+    padding: 0.5rem;
+
+    /*para que se vean los controles de next y prev*/
+    margin-top:0;
+    margin-bottom:0 ;
+    margin-left:4rem ;
+    margin-right: 4rem;
 }

@@ -11,7 +11,7 @@ const CarrouselComponent = () => {
       <div className={styles.textInstagram}><h3>@NeluxTechnology en Instagram</h3></div>
       <section className={styles.carrouselContainer}>
         <Carousel className={styles.carrousel} indicators={false}>
-          <Carousel.Item>
+          <Carousel.Item className={styles.carrouselItem}>
             <Container fluid>
               <Row className={styles.rows}>
                 <Col xs={6} md={4} lg={3} className={styles.carrouselImg}>
@@ -29,7 +29,7 @@ const CarrouselComponent = () => {
               </Row>
             </Container>
           </Carousel.Item>
-          <Carousel.Item>
+          <Carousel.Item className={styles.carrouselItem}>
             <Container fluid>
               <Row className={styles.rows}>
                 <Col xs={6} md={4} lg={3} className={styles.carrouselImg}>
@@ -48,7 +48,7 @@ const CarrouselComponent = () => {
             </Container>
           </Carousel.Item>
 
-          <Carousel.Item>
+          <Carousel.Item className={styles.carrouselItem}>
             <Container fluid>
               <Row className={styles.rows}>
                 <Col xs={6} md={4} lg={3} className={styles.carrouselImg}>
