@@ -1,30 +1,18 @@
 /* src/CartCardModal.module.css */
 .modalOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .modalContent {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    color:black;
-    font-weight:bold;
-    font-family: 'Courier New', Courier, monospace;
-    border: none;
-    border-radius:.5rem;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
+<<<<<<< HEAD
 .modalbuton{
       background-color:#1D1D1B;
       border: none; 
@@ -51,3 +39,40 @@
       background-color: #4d4b55; 
       transform: scale(0.95); 
      }    
+=======
+.modalContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  border: none;
+  border-radius: .5rem;
+}
+
+.modalbuton {
+  background-color: #007bff;
+  border: none;
+  border-radius: 50%;
+  color: black;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0px 1px 1px 0.5px black;
+  text-transform: uppercase;
+  float: left;
+}
+
+.modalbuton:hover {
+  opacity: 0.50;
+  -moz-opacity: .50;
+  filter: alpha (opacity=50);
+}
+>>>>>>> main
