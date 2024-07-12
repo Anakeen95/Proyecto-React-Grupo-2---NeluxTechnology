@@ -66,15 +66,9 @@
         },
         {
             "id": 9,
-<<<<<<< HEAD
-            "name": "hyperx cloud",
-            "description":"Auriculares Hyperx Cloud Flight Wireless PC PS4 PS3 BLACK/RED 4P5L4AA",
-            "price":"122.989",
-=======
             "name": "auriculares hyperx cloud",
             "description": "Auriculares Hyperx Cloud Flight Wireless PC PS4 PS3 BLACK/RED 4P5L4AA",
             "price": "122.989",
->>>>>>> main
             "imageUrl": "./images/auriculares-hyperx-cloud.jpg",
             "quantity": 10
         },
