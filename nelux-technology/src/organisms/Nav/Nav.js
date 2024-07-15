@@ -20,17 +20,17 @@ const Nav = () => {
                     <a className={styles.navBarLink} href="#Home">Home</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Productos">Products</a>
+                    <a className={styles.navBarLink} href="#Products">Products</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Galleria">Gallery</a>
+                    <a className={styles.navBarLink} href="#Gallery">Gallery</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Contacto">Contact</a>
+                    <a className={styles.navBarLink} href="#Contact">Contact</a>
                 </li>
             </div>
             <div className={styles.cartLogo}>
-                <img src="./images/Cart-Icon.png" alt="Cart-Logo" />
+                <a href='#Cart'><img src="./images/Cart-Icon.png" alt="Cart-Logo" /></a>
             </div>
             <div className={styles.burgerMenu} onClick={toggleMenu}>
                 <div className={styles.burgerLine}></div>
