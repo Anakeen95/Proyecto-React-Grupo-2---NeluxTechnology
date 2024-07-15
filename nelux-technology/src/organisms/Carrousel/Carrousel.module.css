@@ -1,0 +1,67 @@
+/*-------------CARRUSEL CONTAINER------------------*/
+.carrouselContainer {
+    width: 100%;
+    max-width: 65rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/*-------------SECCION DE TODO EL CARRUSEL------------------*/
+.sectionCarrousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+/*---------------TAMAÑO IMAGENES----------------*/
+.carrouselImg img {
+    width: 100%;
+    height: auto;
+    /*border: 0.1rem solid #ebf1f1;*/
+    border-top-right-radius: 1.8rem;
+    border-bottom-left-radius: 1.8rem;
+}
+
+/*----------------------CARROUSEL SOLO-----------------------*/
+.carrousel {
+    border: 0.2rem solid #00FDFB;
+    background-color: #1D1D1B;
+    box-shadow: 0 4px 8px black;
+    width: 100%;
+    border-top-right-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
+    border-top-left-radius: 1.6rem;
+    border-bottom-right-radius:1.6rem ;
+    margin: 1rem;
+}
+
+/*----------------------TEXT-----------------------*/
+.textInstagram {
+    font-size: xx-large;
+    color: #2b2e2e;
+    text-align: center;
+    padding: 0.5rem 0;
+    text-shadow: 2px 0px 4px rgba(0, 254, 252, 0.7)
+    
+}
+
+/*----------------------ROWS----------------------*/
+.rows {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+
+    /*para que se vean los controles de next y prev*/
+    margin-top:0;
+    margin-bottom:0 ;
+    margin-left:4rem ;
+    margin-right: 4rem;
+}
