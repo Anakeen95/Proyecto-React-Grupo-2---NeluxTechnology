@@ -120,14 +120,7 @@
             "imageUrl": "./images/silla matrix.jpg",
             "quantity": 10
         }
-    ],
-
-    "BannerHome" :
-	[
-		{
-			"imageUrl": "./images/banner-home.jpg"
-		}
-	]
+    ]
 
 
 }
