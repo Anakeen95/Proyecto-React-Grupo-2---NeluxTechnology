@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCards';
-import styles from './Cards.module.css'
+import styles from './Cards.module.css';
+import Nav from '../organisms/Nav/Nav';
 
 const Cards = () => {
   const [products, setProducts] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -19,15 +21,20 @@ const Cards = () => {
     fetchProducts();
   }, []);
 
+  const addToCart = () => {
+    setCartCount(cartCount + 1);
+  };
+
   return (
     <>
-    <div className={styles.productList}>
-      {products.map(product => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div> 
-  </>
-   );  
+      <Nav cartCount={cartCount} setCartCount={setCartCount} /> {/* Renderizar el componente Nav con cartCount */}
+      <div className={styles.productList}>
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} addToCart={addToCart} />
+        ))}
+      </div>
+    </>
+  );  
 };
 
 export default Cards;

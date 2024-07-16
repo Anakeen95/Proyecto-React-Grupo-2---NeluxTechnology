@@ -1,133 +1,130 @@
 {
-    "Products": [
-        {
-            "id": 1,
-            "name": "Acer Nitro",
-            "description": "Laptop Acer Nitro 15.6 Core I5 8gb Ram 256gb SsdNVIDIA GeForce RTX 3050 Ti 165 Hz Color Negro",
-            "price": "1.456.110",
-            "imageUrl": "./images/Acer.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 2,
-            "name": "Hp Victus",
-            "description": "Notebook Hp Victus 16-d0516la 15.6, Intel Core I5 8gb 512gb Windows 11 Color Azul, Gris, Negra",
-            "price": "1.079.999",
-            "imageUrl": "./images/Hp Victus.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 3,
-            "name": "Asus ROG Flow",
-            "description": "Ultrabook Asus ROG Flow, AMD Ryzen 9 5900HS  16GB de RAM 1TB SSD, NVIDIA GeForce RTX 3050 Ti 165 Hz",
-            "price": "1.360.100",
-            "imageUrl": "./images/Asus.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 4,
-            "name": "Lenovo Legion",
-            "description": "Notebook Lenovo Legion, AMD Ryzen 5 4600H 8GB de RAM 1TB HDD 256GB SSD, NVIDIA GeForce GTX 1650 Ti 120 Hz",
-            "price": "1.957.000",
-            "imageUrl": "./images/Lenovo Legion.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 5,
-            "name": "MSI Thin",
-            "description": "MSI Thin GF63 negra, Intel Core i5 9300H 8GB de RAM 256GB SSD, NVIDIA GeForce GTX 1650, Windows 11",
-            "price": "1.311.173",
-            "imageUrl": "./images/msi1.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 6,
-            "name": "Logitech G733 Series",
-            "description": "Auricular LOGITECH SERIES G733 Wireless Lightspeed RGB White 981, Sonido envolvente y ultraligeros 278 gms",
-            "price": "238.100",
-            "imageUrl": "./images/Auriculares Logitech Series G733.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 7,
-            "name": "Kolke Ultra Gaming",
-            "description": "Auricular Gamer Inalambrico Kolke Ultra Gaming Transmisor 2.4ghz 12Hs Bateria Luz Led Pc Ps4 Ps3 Kga-416",
-            "price": "250.310",
-            "imageUrl": "./images/Auriculares Kolke.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 8,
-            "name": "Razer blackshark",
-            "description": "Auricular gamer Razer blackshark V2 pro wireless white, 12hs bateria, luz led multicolor, PC PS5 xboxOne",
-            "price": "261.913",
-            "imageUrl": "./images/auricular razer blackshark.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 9,
-            "name": "auriculares hyperx cloud",
-            "description": "Auriculares Hyperx Cloud Flight Wireless PC PS4 PS3 BLACK/RED 4P5L4AA",
-            "price": "122.989",
-            "imageUrl": "./images/auriculares-hyperx-cloud.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 10,
-            "name": "CORSAIR GAMER",
-            "description": "Auriculares CORSAIR GAMER VOID RGB Elite wireless carbon, sonido envolvente 7.1, rango de 20HZ-30.000HZ",
-            "price": "163.250",
-            "imageUrl": "./images/auriculares-corsair.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 11,
-            "name": "SILLA CORSAIR",
-            "description": "Silla gamer CORSAIR-t3-rush-griscarbon-0",
-            "price": "78.800",
-            "imageUrl": "./images/silla-gamer-corsair.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 12,
-            "name": "SILLA PRIMUS",
-            "description": "Silla gamer PRIMUS-thronos-200s-black-2",
-            "price": "396.412",
-            "imageUrl": "./images/silla-gamer-primus.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 13,
-            "name": "SILLA LOL",
-            "description": "Sila gamer Lol Blue and Black Gira-360-grados",
-            "price": "186.310",
-            "imageUrl": "./images/silla-gamer-LoL.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 14,
-            "name": "SILLA VONNE",
-            "description": "Silla Gamer VONNE para PC - Roja/Negra",
-            "price": "392.584",
-            "imageUrl": "./images/silla vonner gamer.jpg",
-            "quantity": 10
-        },
-        {
-            "id": 15,
-            "name": "Silla gamer MATRIX",
-            "description": "Silla gamer MATRIX tech-pro-racing-pc-sport-reclinable",
-            "price": "245.410",
-            "imageUrl": "./images/silla matrix.jpg",
-            "quantity": 10
-        }
-    ],
-
-    "BannerHome" :
-	[
-		{
-			"imageUrl": "./images/banner-home.jpg"
-		}
-	]
-
-
+  "Products": [
+    {
+      "id": "1",
+      "name": "Acer Nitro",
+      "description": "Laptop Acer Nitro 15.6 Core I5 8gb Ram 256gb SsdNVIDIA GeForce RTX 3050 Ti 165 Hz Color Negro",
+      "price": "1.456.110",
+      "imageUrl": "./images/Acer.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "2",
+      "name": "Hp Victus",
+      "description": "Notebook Hp Victus 16-d0516la 15.6, Intel Core I5 8gb 512gb Windows 11 Color Azul, Gris, Negra",
+      "price": "1.079.999",
+      "imageUrl": "./images/Hp Victus.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "3",
+      "name": "Asus ROG Flow",
+      "description": "Ultrabook Asus ROG Flow, AMD Ryzen 9 5900HS  16GB de RAM 1TB SSD, NVIDIA GeForce RTX 3050 Ti 165 Hz",
+      "price": "1.360.100",
+      "imageUrl": "./images/Asus.jpg",
+      "quantity": 7
+    },
+    {
+      "id": "4",
+      "name": "Lenovo Legion",
+      "description": "Notebook Lenovo Legion, AMD Ryzen 5 4600H 8GB de RAM 1TB HDD 256GB SSD, NVIDIA GeForce GTX 1650 Ti 120 Hz",
+      "price": "1.957.000",
+      "imageUrl": "./images/Lenovo Legion.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "5",
+      "name": "MSI Thin",
+      "description": "MSI Thin GF63 negra, Intel Core i5 9300H 8GB de RAM 256GB SSD, NVIDIA GeForce GTX 1650, Windows 11",
+      "price": "1.311.173",
+      "imageUrl": "./images/msi1.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "6",
+      "name": "Logitech G733 Series",
+      "description": "Auricular LOGITECH SERIES G733 Wireless Lightspeed RGB White 981, Sonido envolvente y ultraligeros 278 gms",
+      "price": "238.100",
+      "imageUrl": "./images/Auriculares Logitech Series G733.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "7",
+      "name": "Kolke Ultra Gaming",
+      "description": "Auricular Gamer Inalambrico Kolke Ultra Gaming Transmisor 2.4ghz 12Hs Bateria Luz Led Pc Ps4 Ps3 Kga-416",
+      "price": "250.310",
+      "imageUrl": "./images/Auriculares Kolke.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "8",
+      "name": "Razer blackshark",
+      "description": "Auricular gamer Razer blackshark V2 pro wireless white, 12hs bateria, luz led multicolor, PC PS5 xboxOne",
+      "price": "261.913",
+      "imageUrl": "./images/auricular razer blackshark.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "9",
+      "name": "auriculares hyperx cloud",
+      "description": "Auriculares Hyperx Cloud Flight Wireless PC PS4 PS3 BLACK/RED 4P5L4AA",
+      "price": "122.989",
+      "imageUrl": "./images/auriculares-hyperx-cloud.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "10",
+      "name": "CORSAIR GAMER",
+      "description": "Auriculares CORSAIR GAMER VOID RGB Elite wireless carbon, sonido envolvente 7.1, rango de 20HZ-30.000HZ",
+      "price": "163.250",
+      "imageUrl": "./images/auriculares-corsair.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "11",
+      "name": "SILLA CORSAIR",
+      "description": "Silla gamer CORSAIR-t3-rush-griscarbon-0",
+      "price": "78.800",
+      "imageUrl": "./images/silla-gamer-corsair.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "12",
+      "name": "SILLA PRIMUS",
+      "description": "Silla gamer PRIMUS-thronos-200s-black-2",
+      "price": "396.412",
+      "imageUrl": "./images/silla-gamer-primus.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "13",
+      "name": "SILLA LOL",
+      "description": "Sila gamer Lol Blue and Black Gira-360-grados",
+      "price": "186.310",
+      "imageUrl": "./images/silla-gamer-LoL.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "14",
+      "name": "SILLA VONNE",
+      "description": "Silla Gamer VONNE para PC - Roja/Negra",
+      "price": "392.584",
+      "imageUrl": "./images/silla vonner gamer.jpg",
+      "quantity": 10
+    },
+    {
+      "id": "15",
+      "name": "Silla gamer MATRIX",
+      "description": "Silla gamer MATRIX tech-pro-racing-pc-sport-reclinable",
+      "price": "245.410",
+      "imageUrl": "./images/silla matrix.jpg",
+      "quantity": 10
+    }
+  ],
+  "BannerHome": [
+    {
+      "imageUrl": "./images/banner-home.jpg",
+      "id": "fb05"
+    }
+  ]
 }
