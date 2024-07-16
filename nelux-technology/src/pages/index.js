@@ -1,7 +1,4 @@
 import SectionCard from "../molecules/SectionCards"
-
-
-
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
