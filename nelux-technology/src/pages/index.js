@@ -11,28 +11,33 @@ const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
 
+  // Add to Shopping Cart Function
   const addToCart = async (product) => {
-    if (product.quantity <= 0) return;
-
     try {
-      // Actualiza la cantidad del producto en JSON Server
-      await axios.patch(`http://localhost:3000/Products/${product.id}`, {
-        quantity: product.quantity - 1,
+      // Fetch the updated product data from the JSON Server db
+      const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
+      const updatedProduct = response.data;
+
+      if (updatedProduct.quantity <= 0) return;
+
+      // Update the quantity of the product in the JSON Server db
+      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
+        quantity: updatedProduct.quantity - 1,
       });
 
-      // Actualiza el estado del carrito
-      updateCart(product);
+      // Update the shopping cart state
+      updateCart(updatedProduct);
     } catch (error) {
       console.error('Error adding to cart:', error.response ? error.response.data : error.message);
     }
   };
 
-  // Función para actualizar el estado del carrito
+  // Function to update the shopping cart state
   const updateCart = (product) => {
     const existingProductIndex = cart.findIndex(item => item.id === product.id);
 
     if (existingProductIndex !== -1) {
-      // Si el producto ya está en el carrito, actualiza la cantidad
+      // If the product is already in the cart, updates the quantity
       const updatedCart = [...cart];
       updatedCart[existingProductIndex] = {
         ...updatedCart[existingProductIndex],
@@ -40,12 +45,12 @@ const Index = () => {
       };
       setCart(updatedCart);
     } else {
-      // Si el producto no está en el carrito, agrégalo
+      // If the product is not in the cart, adds it
       setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
     }
   };
 
-  // Actualiza el conteo de productos en el carrito
+  // Update the cart count whenever the shopping cart state changes
   useEffect(() => {
     setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
   }, [cart]);
@@ -54,7 +59,7 @@ const Index = () => {
     <main>
       <Nav cartCount={cartCount} />
       <BannerHome />
-      <Cards addToCart={addToCart} /> {/* Pasa la función addToCart a Cards */}
+      <Cards addToCart={addToCart} />
       <Carrousel />
       <Footer />
     </main>
