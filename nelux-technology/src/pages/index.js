@@ -21,30 +21,33 @@ const Index = () => {
       });
 
       // Actualiza el estado del carrito
-      setCart(prevCart => {
-        const existingProduct = prevCart.find(item => item.id === product.id);
-        if (existingProduct) {
-          // Si el producto ya está en el carrito, incrementa la cantidad
-          return prevCart.map(item =>
-            item.id === product.id
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
-          );
-        } else {
-          // Si el producto no está en el carrito, agrégalo
-          return [...prevCart, { ...product, quantity: 1 }];
-        }
-      });
+      updateCart(product);
     } catch (error) {
       console.error('Error adding to cart:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  // Función para actualizar el estado del carrito
+  const updateCart = (product) => {
+    const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+    if (existingProductIndex !== -1) {
+      // Si el producto ya está en el carrito, actualiza la cantidad
+      const updatedCart = [...cart];
+      updatedCart[existingProductIndex] = {
+        ...updatedCart[existingProductIndex],
+        quantity: updatedCart[existingProductIndex].quantity + 1
+      };
+      setCart(updatedCart);
+    } else {
+      // Si el producto no está en el carrito, agrégalo
+      setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
     }
   };
 
   // Actualiza el conteo de productos en el carrito
   useEffect(() => {
     setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
-    console.log("Cart:", cart);  // Verifica que el carrito se actualiza
-    console.log("Cart Count:", cartCount);  // Verifica que el conteo es correcto
   }, [cart]);
 
   return (
