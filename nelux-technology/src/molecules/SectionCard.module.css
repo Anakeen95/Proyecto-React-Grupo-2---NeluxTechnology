@@ -1,21 +1,16 @@
-/* src/components/SectionCard.module.css */
-
 .section {
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .sectionTitle {
-    text-align: center;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color:black;
-  }
-  
-  .productList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-  }
-  
+  padding: 20px;
+  background-color: #EBEBEB;
+}
+.sectionTitle {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color:black;
+}
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}

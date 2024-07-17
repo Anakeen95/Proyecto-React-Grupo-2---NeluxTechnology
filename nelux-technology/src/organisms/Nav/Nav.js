@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import styles from './Nav.module.css';
-import Button from '../../atoms/Button/Button';
-import axios from 'axios';
 
-const Nav = ({ cartCount, setCartCount }) => {
+const Nav = ({ cartCount }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -31,7 +29,7 @@ const Nav = ({ cartCount, setCartCount }) => {
             </div>
             <div className={styles.cartLogo}>
                 <img src="./images/Cart-Icon.png" alt="Cart-Logo" />
-                {cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
+                { cartCount>0 && <span className={styles.cartCount}>{cartCount}</span>}
             </div>
             <div className={styles.burgerMenu} onClick={toggleMenu}>
                 <div className={styles.burgerLine}></div>
