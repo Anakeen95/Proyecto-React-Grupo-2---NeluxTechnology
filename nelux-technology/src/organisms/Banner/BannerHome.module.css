@@ -1,4 +1,5 @@
 .homeContainer {
+  background-color: #1D1D1B;
   width: 100%;
   height: auto;
   /* Altura del banner */
@@ -21,10 +22,13 @@
 
 @media (min-width: 768px) {
   .homeContainer {
-    height: calc(100vh - 60px); /* Altura del banner para pantallas más grandes */
+    height: calc(100vh - 60px);
+    background-color: #1D1D1B;
+    /* Altura del banner para pantallas más grandes */
   }
 
   .homeImg {
-    height: 100%; /* Cambia la altura para cubrir el contenedor */
+    height: 100%;
+    /* Cambia la altura para cubrir el contenedor */
   }
 }
