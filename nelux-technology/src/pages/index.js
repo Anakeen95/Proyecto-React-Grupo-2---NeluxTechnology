@@ -10,12 +10,12 @@ import Carrousel from "../organisms/Carrousel/CarrouselComponent"
 const index = () => {
   return (
     <main>
-      <Nav />
+      <section id="Navigation"><Nav /></section>
       <section id="Home"><BannerHome /></section>
       <section id="Products"><SectionCard /></section>
       <section id="Gallery"><Carrousel /></section>
+      <section id="Cart"></section> // Aca agregar el componente del Carrito para que este vinculado a la Nav */
       <section id="Contact"><Footer /></section>
-      {/* <section id="Cart"></section> */} // Aca agregar el componente del Carrito para que este vinculado a la Nav
     </main>
   );
 };

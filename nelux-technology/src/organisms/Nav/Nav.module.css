@@ -8,6 +8,7 @@
     justify-content: space-between;
     padding: 0 1rem;
     position: relative;
+
 }
 
 /* Estilos del logo */
@@ -18,12 +19,8 @@
 .logo img {
     height: 50px;
     width: auto;
-    transition: transform 0.3s ease-in-out;
 }
 
-.logo img:hover {
-    transform: scale(1.1);
-}
 
 /* Estilos del menú de navegación */
 .navBar {
@@ -41,11 +38,9 @@
 .navBarItem {
     padding: 1rem;
     margin: 2px;
-    transition: transform 0.3s ease-in-out;
 }
 
 .navBarItem:hover {
-    transform: scale(1.2);
     color: white;
 }
 
@@ -67,12 +62,9 @@
 .cartLogo img {
     height: 25px;
     width: auto;
-    transition: transform 0.3s ease-in-out;
 }
 
-.cartLogo img:hover {
-    transform: scale(1.2);
-}
+
 
 /* Estilos del menú hamburguesa */
 .burgerMenu {
@@ -97,13 +89,14 @@
     transform: rotate(45deg);
 }
 
-/* Media query para pantallas pequeñas (max-width: 768px) */
-@media (max-width: 768px) {
+/* Media query para pantallas pequeñas (max-width: 600px) */
+@media (max-width: 600px) {
     .nav {
         flex-direction: row;
         align-items: center;
         height: auto;
         padding: 0.5rem 1rem;
+        margin: 0px;
     }
 
     .navBar {
@@ -111,7 +104,7 @@
         width: 100vw;
         position: absolute;
         top: 60px;
-        right: -100%;
+        right: 0%;
         background-color: #1D1D1B;
         justify-content: center;
         align-items: center;
@@ -126,9 +119,11 @@
 
     .navBarItem {
         width: 100%;
-        padding: 1rem 0;
+        padding-top: 16px;
         text-align: center;
+
     }
+
 
     .cartLogo {
         order: 3;
@@ -141,7 +136,7 @@
 }
 
 /* Media query para pantallas grandes (min-width: 769px) */
-@media (min-width: 769px) {
+@media (min-width: 601px) {
     .burgerMenu {
         display: none;
         /* Ocultar el menú hamburguesa en pantallas grandes */
@@ -156,6 +151,7 @@
         /* Centrar los enlaces */
         align-items: center;
         /* Alinear verticalmente con los iconos */
+
     }
 
     .navBarItem {

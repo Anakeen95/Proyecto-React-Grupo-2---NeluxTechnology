@@ -1,13 +1,15 @@
-
 import React, { useState } from 'react';
 import styles from './Nav.module.css';
-
 
 const Nav = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
+    };
+
+    const handleCloseMenu = () => {
+        setIsOpen(false);
     };
 
     return (
@@ -17,16 +19,16 @@ const Nav = () => {
             </div>
             <div className={`${styles.navBar} ${isOpen ? styles.navBarOpen : ''}`}>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Home">Home</a>
+                    <a className={styles.navBarLink} href="#Home" onClick={handleCloseMenu}>Home</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Products">Products</a>
+                    <a className={styles.navBarLink} href="#Products" onClick={handleCloseMenu}>Products</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Gallery">Gallery</a>
+                    <a className={styles.navBarLink} href="#Gallery" onClick={handleCloseMenu}>Gallery</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Contact">Contact</a>
+                    <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>Contact</a>
                 </li>
             </div>
             <div className={styles.cartLogo}>
