@@ -27,7 +27,7 @@ const ProductCard = ({ product, addToCart }) => {
           </div>
           <div className={styles.buttonContainer}>
             <Button
-              quantity={product.quantity} // Pass the product's quantity here
+              quantity={product.quantity}
               addToCart={handleAddToCart}
             />
           </div>
