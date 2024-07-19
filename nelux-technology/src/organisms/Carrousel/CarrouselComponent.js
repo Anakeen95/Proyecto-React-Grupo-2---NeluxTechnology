@@ -10,7 +10,7 @@ const CarrouselComponent = () => {
     <section className={styles.sectionCarrousel}>
       <div className={styles.textInstagram}><h3>@NeluxTechnology en Instagram</h3></div>
       <section className={styles.carrouselContainer}>
-        <Carousel className={styles.carrousel} indicators={false}>
+        <Carousel className={styles.carrouselComplete} indicators={false}>
           <Carousel.Item className={styles.carrouselItem}>
             <Container fluid>
               <Row className={styles.rows}>

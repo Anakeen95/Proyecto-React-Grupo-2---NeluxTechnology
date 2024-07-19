@@ -18,17 +18,14 @@ const Nav = () => {
                 <img src="./images/NeluxTech-Isotipo-Negro.png" alt="Logo" />
             </div>
             <div className={`${styles.navBar} ${isOpen ? styles.navBarOpen : ''}`}>
-                <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Home" onClick={handleCloseMenu}>Home</a>
+                 <li className={styles.navBarItem}>
+                    <a className={styles.navBarLink} href="#Products" onClick={handleCloseMenu}>Productos</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Products" onClick={handleCloseMenu}>Products</a>
+                    <a className={styles.navBarLink} href="#Gallery" onClick={handleCloseMenu}>Galería</a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Gallery" onClick={handleCloseMenu}>Gallery</a>
-                </li>
-                <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>Contact</a>
+                    <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>Contacto</a>
                 </li>
             </div>
             <div className={styles.cartLogo}>
