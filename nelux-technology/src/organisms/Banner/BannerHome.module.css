@@ -1,34 +1,35 @@
 .homeContainer {
-  background-color: #1D1D1B;
   width: 100%;
-  height: auto;
-  /* Altura del banner */
-  /*background-color: #00FCF9;*/
-  /* Color de fondo mientras carga la imagen */
+  background-color: #1D1D1B;
+  height:calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 /* Estilos para la imagen */
 .homeImg {
-  width: 100%;
+  width: 100vw;
   height: auto;
   object-fit: cover;
-  /* Ajusta la imagen para cubrir el contenedor */
+
 }
 
 /* Media queries para ajustar el banner en pantallas más pequeñas */
 
-@media (min-width: 768px) {
+@media (max-width: 600px) {
   .homeContainer {
     height: calc(100vh - 60px);
+    max-width: 100%;
     background-color: #1D1D1B;
-    /* Altura del banner para pantallas más grandes */
+    margin-bottom: 3rem;
+    /* Altura del banner para pantallas más chicas */
   }
 
   .homeImg {
-    height: 100%;
-    /* Cambia la altura para cubrir el contenedor */
+    height: 100vh;
+    object-fit: cover;
   }
+
 }
