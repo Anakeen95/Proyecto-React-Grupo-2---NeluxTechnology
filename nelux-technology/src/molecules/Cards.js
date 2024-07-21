@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from './ProductCards';
-import styles from './Cards.module.css'
+import styles from './Cards.module.css';
 
+<<<<<<< HEAD
 const Cards = () => {
       const [products, setProducts] = useState([]);
+=======
+const Cards = ({ addToCart }) => { // Asegúrate de recibir addToCart como prop
+  const [products, setProducts] = useState([]);
+>>>>>>> Nacho-CarritoCounter
 
       useEffect(() => {
         const fetchProducts = async () => {
@@ -19,6 +24,7 @@ const Cards = () => {
         fetchProducts();
       }, []);
 
+<<<<<<< HEAD
       return (
         <>
         <div className={styles.productList}>
@@ -28,6 +34,15 @@ const Cards = () => {
         </div> 
       </>
       );  
+=======
+  return (
+    <div className={styles.productList}>
+      {products.map(product => (
+        <ProductCard key={product.id} product={product} addToCart={addToCart} /> 
+      ))}
+    </div>
+  );
+>>>>>>> Nacho-CarritoCounter
 };
 
 export default Cards;
