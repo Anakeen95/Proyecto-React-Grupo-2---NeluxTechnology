@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from "../atoms/Button/Button";
 import CartCardModal from './CartCardModal';
 import styles from "./Cards.module.css";
-import Buttoninfo from '../atoms/Button/buttoninfo';
+import Buttoninfo from '../atoms/Button/Buttoninfo';
 import ProductsModal from './ProductsModal';
 
 const ProductCard = ({ product }) => {
