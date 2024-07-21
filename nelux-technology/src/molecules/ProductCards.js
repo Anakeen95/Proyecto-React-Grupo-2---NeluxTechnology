@@ -7,7 +7,7 @@ const ProductCard = ({ product, addToCart }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleAddToCart = () => {
-    addToCart(product); // Call addToCart when the button is clicked
+    addToCart(product); 
     setShowModal(true);
   };
 
@@ -26,10 +26,7 @@ const ProductCard = ({ product, addToCart }) => {
             <h4 className={styles.cardPrice}>${product.price}</h4>
           </div>
           <div className={styles.buttonContainer}>
-            <Button
-              quantity={product.quantity}
-              addToCart={handleAddToCart}
-            />
+            <Button quantity={product.quantity} addToCart={handleAddToCart}/>
           </div>
         </div>  
       </div>
