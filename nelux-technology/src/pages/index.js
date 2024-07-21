@@ -23,6 +23,7 @@ const Index = () => {
     };
 
     fetchProducts();
+    resetProductQuantities(); // Reset quantities on page load
   }, []);
 
   const addToCart = async (product) => {
@@ -54,6 +55,25 @@ const Index = () => {
       setCart(updatedCart);
     } else {
       setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
+    }
+  };
+
+  const resetProductQuantities = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/Products');
+      const products = response.data;
+  
+      // Create an array of promises to update the quantity of each product
+      const updatePromises = products.map(product =>
+        axios.patch(`http://localhost:3000/Products/${product.id}`, {
+          quantity: 10
+        })
+      );
+  
+      // Wait for all promises to resolve
+      await Promise.all(updatePromises);
+    } catch (error) {
+      console.error('Error resetting product quantities:', error.response ? error.response.data : error.message);
     }
   };
 
