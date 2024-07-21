@@ -7,7 +7,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-    position: relative;
+    position: fixed; /* Cambia a fixed para que se quede en la parte superior */
+    top: 0; /* Asegura que esté en la parte superior */
+    left: 0; /* Asegura que esté alineado a la izquierda */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.navScrolled {
+    background-color: #000; /* Color de fondo cuando el usuario hace scroll */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega sombra cuando scrollea */
 }
 
 /* Estilos del logo */
