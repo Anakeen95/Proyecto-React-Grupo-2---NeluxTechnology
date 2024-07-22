@@ -10,7 +10,8 @@ const Buttoninfo = () => {
           display: flex;
           justify-content: space-between; 
           gap: 10px;
-          margin-top: 10px; 
+          margin-top: 10px;
+        }   
         .button {
           flex: 1; 
           color: #00FDFB;
