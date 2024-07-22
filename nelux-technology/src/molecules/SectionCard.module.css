@@ -1,17 +1,13 @@
-/* src/components/SectionCard.module.css */
-
 .section {
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #EBEBEB;
 }
-
 .sectionTitle {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
-  color: black;
+  color:black;
 }
-
 .productList {
   display: flex;
   flex-wrap: wrap;
