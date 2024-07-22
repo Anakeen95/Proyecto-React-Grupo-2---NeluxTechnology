@@ -57,11 +57,11 @@
   font-weight: bold;
   color: rgb(0, 0, 0);
 }
-
 .buttonContainer {
   display: flex;
   justify-content: center;
 }
+
 
 /******* ProductList *************/
 

@@ -8,8 +8,8 @@ const ProductsModal = ({ product, onClose, isOpen }) => {
   return (
     <Modal isOpen={isOpen} toggle={onClose}>
       <ModalHeader toggle={onClose}>Información del Producto</ModalHeader>
-      <ModalBody>
-        <img src={product.imageUrl} alt={product.name} className={styles.img} />
+      <ModalBody className={styles.bodyModal}>
+        <img src={product.imageUrl} alt={product.name} className={styles.cardImg} />
         <div>
           <h5 className={styles.cardTitle}>{product.name}</h5>
           <p className={styles.cardText}>{product.description}</p>
