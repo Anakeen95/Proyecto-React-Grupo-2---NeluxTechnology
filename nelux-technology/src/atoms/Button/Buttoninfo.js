@@ -8,12 +8,11 @@ const Buttoninfo = () => {
       <style jsx>{`
         .button-container {
           display: flex;
-          justify-content: space-between; 
+          justify-content: center;
           gap: 10px;
-          margin-left: 70px;
-          height: 30px;
-          width: 120px;
-          margin-top: 10px;
+          align-items:center;
+          padding:0px 40px;
+        
         }   
         .button {
           flex: 1; 
