@@ -8,12 +8,11 @@ const Buttoninfo = () => {
       <style jsx>{`
         .button-container {
           display: flex;
-          justify-content: space-between; /* Cambiado a space-between */
+          justify-content: space-between; 
           gap: 10px;
-          margin-top: 10px; /* Añadido para separar el contenedor del contenido de la tarjeta */
-        }
+          margin-top: 10px; 
         .button {
-          flex: 1; /* Asegura que ambos botones ocupen el mismo espacio */
+          flex: 1; 
           color: #00FDFB;
           background-color: #1D1D1B;
           padding: 6px 8px;

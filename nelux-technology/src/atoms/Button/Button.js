@@ -19,12 +19,12 @@ const Button = ({ quantity, addToCart }) => {
       <style jsx>{`
         .button-container {
           display: flex;
-          justify-content: space-between; /* Cambiado a space-between */
+          justify-content: space-between;
           gap: 10px;
-          margin-top: 10px; /* Añadido para separar el contenedor del contenido de la tarjeta */
+          margin-top: 10px; 
         }
         .button {
-          flex: 1; /* Asegura que ambos botones ocupen el mismo espacio */
+          flex: 1; 
           color: #00FDFB;
           background-color: ${localQuantity > 0 ? '#1D1D1B' : '#6c757d'};
           padding: 6px 8px;
