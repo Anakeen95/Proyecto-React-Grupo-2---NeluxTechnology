@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Cards from "../molecules/Cards";
 import SectionCard from "../molecules/SectionCards"
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
