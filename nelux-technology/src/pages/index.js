@@ -3,7 +3,7 @@ import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Carrousel from "../organisms/Carrousel/CarrouselComponent"
+import Carrousel from "../organisms/Carrousel/CarrouselComponent";
 
 
 
