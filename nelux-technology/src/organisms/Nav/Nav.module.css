@@ -7,10 +7,6 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 1rem;
-<<<<<<< HEAD
-    position: relative;
-
-=======
     position: fixed; /* Cambia a fixed para que se quede en la parte superior */
     top: 0; /* Asegura que esté en la parte superior */
     left: 0; /* Asegura que esté alineado a la izquierda */
@@ -21,7 +17,6 @@
 .navScrolled {
     background-color: #000; /* Color de fondo cuando el usuario hace scroll */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega sombra cuando scrollea */
->>>>>>> Nacho-CarritoCounter
 }
 
 /* Estilos del logo */
@@ -143,7 +138,6 @@
         transition: right 0.3s ease, opacity 0.3s ease;
     }
 
-<<<<<<< HEAD
     .navBarOpen {
         right: 0;
         opacity: 1;
@@ -174,8 +168,6 @@
         /* Ocultar el menú hamburguesa en pantallas grandes */
     }
 
-=======
->>>>>>> Nacho-CarritoCounter
     .navBar {
         display: flex;
         /* Mostrar el menú de navegación */

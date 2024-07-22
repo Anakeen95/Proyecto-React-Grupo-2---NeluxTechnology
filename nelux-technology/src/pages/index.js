@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-import SectionCard from "../molecules/SectionCards"
-=======
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Cards from "../molecules/Cards";
->>>>>>> Nacho-CarritoCounter
+import SectionCard from "../molecules/SectionCards"
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
@@ -84,23 +81,15 @@ const Index = () => {
   useEffect(() => {
     setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
   }, [cart]);
-
+  
+  
   return (
     <main>
-<<<<<<< HEAD
-      <section id="Navigation"><Nav /></section>
+      <section id="Navigation"><Nav cartCount={cartCount}/></section>
       <section id="Home"><BannerHome /></section>
-      <section id="Products"><SectionCard /></section>
+      <section id="Products"><SectionCard products={products} addToCart={addToCart}/></section>
       <section id="Gallery"><Carrousel /></section>
-      <section id="Cart"></section> // Aca agregar el componente del Carrito para que este vinculado a la Nav */
       <section id="Contact"><Footer /></section>
-=======
-      <Nav cartCount={cartCount} />
-      <BannerHome />
-      <Cards products={products} addToCart={addToCart} />
-      <Carrousel />
-      <Footer />
->>>>>>> Nacho-CarritoCounter
     </main>
   );
 };

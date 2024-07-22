@@ -1,25 +1,13 @@
 .section {
   padding: 20px;
-<<<<<<< HEAD
-  background-color: #f9f9f9;
-}
-
-=======
   background-color: #EBEBEB;
 }
->>>>>>> Nacho-CarritoCounter
 .sectionTitle {
   text-align: center;
   font-size: 2em;
   margin-bottom: 20px;
-<<<<<<< HEAD
-  color: black;
-}
-
-=======
   color:black;
 }
->>>>>>> Nacho-CarritoCounter
 .productList {
   display: flex;
   flex-wrap: wrap;

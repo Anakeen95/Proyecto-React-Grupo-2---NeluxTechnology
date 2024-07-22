@@ -32,7 +32,6 @@ const Button = ({ quantity, addToCart }) => {
           };
           padding-top: 5px;
         }
-
         .button:hover {
           font-weight: bold;
           box-shadow: ${localQuantity > 0 ? '0px 1px 1px 1px #00FDFB' : 'none'};
@@ -40,7 +39,6 @@ const Button = ({ quantity, addToCart }) => {
           -moz-opacity: ${localQuantity > 0 ? '.70' : '1'};
           filter: ${localQuantity > 0 ? 'alpha(opacity=20)' : 'none'};
         }
-
         .button:active {
           background-color: ${localQuantity > 0 ? '#4d4b55' : '#6c757d'};
           transform: ${localQuantity > 0 ? 'scale(0.95)' : 'none'};
