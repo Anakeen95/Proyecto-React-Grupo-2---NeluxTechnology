@@ -10,8 +10,8 @@
   text-align: center;
   box-shadow: 0px 1px 2px 0.5px black;
   transition: transform 0.3s ease-in-out;
-  box-sizing: border-box; /* Incluye el padding y el borde en el cálculo del tamaño */
-  margin-bottom: 16px; /* Añadido para asegurar espacio uniforme entre tarjetas */
+  box-sizing: border-box;
+  margin-bottom: 16px;
 }
 
 .card:hover {
@@ -19,8 +19,8 @@
 }
 
 .cardImg {
-  width: 100%; /* Ajusta el ancho al 100% del contenedor */
-  height: 210px; /* Altura fija para mantener la consistencia */
+  width: 100%;
+  height: 210px;
   object-fit: cover;
 }
 
@@ -28,14 +28,14 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  flex: 1; /* Permite que el contenido crezca para llenar el espacio disponible */
-  padding: 10px; /* Espaciado interno consistente */
-  min-height: 150px; /* Altura mínima para mantener la consistencia en las tarjetas */
+  flex: 1;
+  padding: 10px;
+  min-height: 150px;
 }
 
 .cardTitle, .cardText, .cardPrice {
-  margin: 10px 0; /* Espaciado uniforme alrededor del contenido */
-  overflow: hidden; /* Evita el desbordamiento de texto */
+  margin: 10px 0;
+  overflow: hidden;
 }
 
 .cardTitle {
@@ -49,7 +49,7 @@
 .cardText {
   font-size: 0.9em;
   color: black;
-  flex: 1; /* Permite que el texto ocupe el espacio disponible */
+  flex: 1;
 }
 
 .cardPrice {
@@ -63,12 +63,12 @@
   justify-content: center;
 }
 
-/******* ProductList *************/ 
+/******* ProductList *************/
 
 .productList {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Tamaño fijo para las tarjetas */
-  gap: 16px; /* Ajusta el espaciado entre tarjetas según sea necesario */
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   justify-items: center;
   padding: 5px;
 }
@@ -81,7 +81,7 @@
   }
 
   .card {
-    width: 100%; /* Ajusta el ancho al 100% para pantallas pequeñas */
+    width: 100%;
   }
 
   .cardTitle {
@@ -99,12 +99,12 @@
 
 @media (min-width: 601px) {
   .productList {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     padding: 12px;
   }
 
   .card {
-    width: 90%; /* Mantén el ancho del 90% para pantallas medianas */
+    width: 100%;
   }
 
   .cardTitle {

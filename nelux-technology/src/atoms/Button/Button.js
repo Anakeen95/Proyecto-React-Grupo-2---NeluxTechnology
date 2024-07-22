@@ -21,7 +21,10 @@ const Button = ({ quantity, addToCart }) => {
           display: flex;
           justify-content: space-between;
           gap: 10px;
-          margin-top: 10px; 
+          margin-top: 10px;
+          margin-left: 40px;
+          height: 30px;
+          width: 180px; 
         }
         .button {
           flex: 1; 

@@ -10,6 +10,9 @@ const Buttoninfo = () => {
           display: flex;
           justify-content: space-between; 
           gap: 10px;
+          margin-left: 70px;
+          height: 30px;
+          width: 120px;
           margin-top: 10px;
         }   
         .button {
