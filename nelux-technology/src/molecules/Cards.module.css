@@ -19,9 +19,10 @@
 }
 
 .cardImg {
-  width: 100%;
-  height: 210px;
+  width: 50%;
+  height: 15%;
   object-fit: cover;
+  max-height: 20%;
 }
 
 .cardContent {
@@ -59,8 +60,18 @@
 }
 .buttonContainer {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+}
+.bodyModal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
+
 
 
 /******* ProductList *************/
@@ -82,6 +93,7 @@
 
   .card {
     width: 100%;
+    align-items: center;
   }
 
   .cardTitle {
@@ -94,6 +106,12 @@
 
   .cardPrice {
     font-size: 1em;
+  }
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8em;
   }
 }
 
@@ -117,5 +135,11 @@
 
   .cardPrice {
     font-size: 1.05em;
+  }
+  .buttonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.8em;
   }
 }

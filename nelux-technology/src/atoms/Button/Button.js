@@ -19,12 +19,13 @@ const Button = ({ quantity, addToCart }) => {
       <style jsx>{`
         .button-container {
           display: flex;
-          justify-content: space-between;
+          justify-content: center;
           gap: 10px;
-          margin-top: 10px;
-          margin-left: 40px;
-          height: 30px;
-          width: 180px; 
+          align-items:center;
+          padding:0px 40px;
+          margin-bottom:5px;
+        
+           
         }
         .button {
           flex: 1; 

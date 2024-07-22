@@ -34,10 +34,13 @@ const ProductCard = ({ product, addToCart }) => {
           <p className={styles.cardText}>{product.description}</p>
           <h4 className={styles.cardPrice}>${product.price}</h4>
         </div>
-        <button onClick={() => handleButtonClick('cart')}><Button quantity={product.quantity} addToCart={handleAddToCart}/></button> {/* Botón para el carrito */}
-        <button onClick={() => handleButtonClick('info')}><Buttoninfo /></button> {/* Botón para la información */}
-        <button onClick={() => handleButtonClick('more')} className={styles.moreButton}>Ver más</button> {/* Botón "Ver más" */}
+        <div className={styles.buttonContainer}>
+          <button onClick={() => handleButtonClick('cart')}><Button quantity={product.quantity} addToCart={handleAddToCart}/></button> {/* Botón para el carrito */}
+          <button onClick={() => handleButtonClick('info')}><Buttoninfo /></button> {/* Botón para la información */}
+          <button onClick={() => handleButtonClick('more')} className={styles.moreButton}>Ver más</button> {/* Botón "Ver más" */}
+        </div>
       </div>
+
       {showModal && modalType === 'cart' && <CartCardModal message="¡El producto se agregó al carrito!" onClose={handleCloseModal} isOpen={showModal} />} {/* Modal para el carrito */}
       {showModal && modalType === 'info' && <ProductsModal product={product} onClose={handleCloseModal} isOpen={showModal} />} {/* Modal para la información */}
       {showModal && modalType === 'more' && <ProductsModal product={product} onClose={handleCloseModal} isOpen={showModal} />} {/* Modal para "Ver más" */}
