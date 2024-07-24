@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Nav.module.css';
 
-const Nav = ({ cartCount }) => {
+const Nav = ({ cartCount, toggleCart }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
 
@@ -45,8 +45,8 @@ const Nav = ({ cartCount }) => {
                     <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>Contacto</a>
                 </li>
             </ul>
-            <div className={styles.cartLogo}>
-                <a href='#Cart'><img src="./images/Cart-Icon.png" alt="Cart-Logo" /></a>
+            <div className={styles.cartLogo} onClick={toggleCart}>
+                <img src="./images/Cart-Icon.png" alt="Cart-Logo" />
                 { cartCount > 0 && <span className={styles.cartCount}>{cartCount}</span>}
             </div>
             <div className={styles.burgerMenu} onClick={toggleMenu}>
