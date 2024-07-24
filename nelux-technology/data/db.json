@@ -6,7 +6,7 @@
       "description": "Laptop Acer Nitro 15.6 Core I5 8gb Ram 256gb SsdNVIDIA GeForce RTX 3050 Ti 165 Hz Color Negro",
       "price": "1.456.110",
       "imageUrl": "./images/Acer.jpg",
-      "quantity": 10
+      "quantity": 7
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "description": "Notebook Hp Victus 16-d0516la 15.6, Intel Core I5 8gb 512gb Windows 11 Color Azul, Gris, Negra",
       "price": "1.079.999",
       "imageUrl": "./images/Hp Victus.jpg",
-      "quantity": 10
+      "quantity": 3
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "description": "Ultrabook Asus ROG Flow, AMD Ryzen 9 5900HS  16GB de RAM 1TB SSD, NVIDIA GeForce RTX 3050 Ti 165 Hz",
       "price": "1.360.100",
       "imageUrl": "./images/Asus.jpg",
-      "quantity": 10
+      "quantity": 8
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "description": "Notebook Lenovo Legion, AMD Ryzen 5 4600H 8GB de RAM 1TB HDD 256GB SSD, NVIDIA GeForce GTX 1650 Ti 120 Hz",
       "price": "1.957.000",
       "imageUrl": "./images/Lenovo Legion.jpg",
-      "quantity": 10
+      "quantity": 9
     },
     {
       "id": "5",
@@ -54,7 +54,7 @@
       "description": "Auricular Gamer Inalambrico Kolke Ultra Gaming Transmisor 2.4ghz 12Hs Bateria Luz Led Pc Ps4 Ps3 Kga-416",
       "price": "250.310",
       "imageUrl": "./images/Auriculares Kolke.jpg",
-      "quantity": 9
+      "quantity": 10
     },
     {
       "id": "8",

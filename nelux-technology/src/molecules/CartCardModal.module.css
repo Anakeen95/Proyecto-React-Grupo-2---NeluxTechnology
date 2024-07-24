@@ -1,14 +1,13 @@
-/* src/CartCardModal.module.css */
 .modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: transparent; /* Elimina el sombreado de fondo */
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Asegúrate de empezar desde arriba */
   z-index: 1000;
 }
 
@@ -23,27 +22,34 @@
   font-family: 'Courier New', Courier, monospace;
   border: none;
   border-radius: .5rem;
+  animation: slideIn 1s forwards, slideOut 1s 2s forwards; /* Ajustar la duración de la animación */
 }
 
-.modalbuton {
-  background-color: #007bff;
-  border: none;
-  border-radius: 50%;
-  color: black;
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.modalInner {
+  display: flex;
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
+}
+
+.modalImage {
   width: 40px;
   height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  cursor: pointer;
-  box-shadow: 0px 1px 1px 0.5px black;
-  text-transform: uppercase;
-  float: left;
-}
-
-.modalbuton:hover {
-  opacity: 0.50;
-  -moz-opacity: .50;
-  filter: alpha (opacity=50);
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
