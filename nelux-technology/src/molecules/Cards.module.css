@@ -8,7 +8,7 @@
   overflow: hidden;
   width: 250px;
   text-align: center;
-  box-shadow: 0px 1px 2px 0.5px black;
+  box-shadow: 0.3px 0.3px 0.3px 0.3px black;
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
   margin-bottom: 16px;
@@ -18,11 +18,14 @@
   transform: scale(1.05);
 }
 
+.cardImgContainer {
+  padding: 10px; 
+}
+
 .cardImg {
-  width: 50%;
-  height: 15%;
-  object-fit: cover;
-  max-height: 20%;
+  width: calc(100% - 20px); 
+  height: auto;
+  object-fit: contain; 
 }
 
 .cardContent {
@@ -35,7 +38,7 @@
 }
 
 .cardTitle, .cardText, .cardPrice {
-  margin: 10px 0;
+  margin: 12px 2px;
   overflow: hidden;
 }
 
@@ -51,6 +54,7 @@
   font-size: 0.9em;
   color: black;
   flex: 1;
+  margin: 10px;
 }
 
 .cardPrice {

@@ -28,7 +28,9 @@ const ProductCard = ({ product, addToCart }) => {
   return (
     <>
       <div className={styles.card}>
-        <img src={product.imageUrl} alt={product.name} className={styles.img} />
+         <div className={styles.cardImgContainer}>
+           <img src={product.imageUrl} alt={product.name} className={styles.cardImg} />
+         </div>
         <div>
           <h5 className={styles.cardTitle}>{product.name}</h5>
           <p className={styles.cardText}>{product.description}</p>
