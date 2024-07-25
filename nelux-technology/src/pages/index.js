@@ -11,7 +11,7 @@ import Carrousel from "../organisms/Carrousel/CarrouselComponent";
 
 // Main component for the index page
 const Index = () => {
-  // States variables for cart items, cart count, and products
+  // States variables for cart items, cart count, cart actions, and products
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [products, setProducts] = useState([]);
@@ -116,32 +116,36 @@ const Index = () => {
     // Updates the cart count whenever the cart state changes
     setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
     // Dependency array that ensures this effect runs whenever the `cart` changes
-  }, [cart]); 
+  }, [cart]);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
 
   return (
     <main>
-      /* Navigation section with cart count */
+      {/* Navigation section with cart count */}
       <section id="Navigation">
         <Nav cartCount={cartCount}/>
       </section>  
-      /* Banner section */
+      {/* Banner section */}
       <section id="Home">
         <BannerHome/>
       </section>  
-      /* Products section with products, cards and addToCart function to add products on shopping cart */
+      {/* Products section with products, cards and addToCart function to add products on shopping cart */}
       <section id="Products">
         <SectionCard products={products} addToCart={addToCart}/>
       </section>
-      /* Images Gallery section */
+      {/* Images Gallery section */}
       <section id="Gallery">
         <Carrousel/>
       </section>
-      /* Footer section */
+      {/* Footer section */}
       <section id="Contact">
         <Footer/>
       </section>
       <section>
-      /* Cart section with cart actions */
+      {/* Cart section with cart actions */}
       <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart}  closeCart={toggleCart}  isCartOpen={isCartOpen}/>
       </section>
     </main>

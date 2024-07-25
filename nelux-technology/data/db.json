@@ -6,7 +6,7 @@
       "description": "Laptop Acer Nitro 15.6 Core I5 8gb Ram 256gb SsdNVIDIA GeForce RTX 3050 Ti 165 Hz Color Negro",
       "price": "1.456.110",
       "imageUrl": "./images/Acer.jpg",
-      "quantity": 8
+      "quantity": 10
     },
     {
       "id": "2",
@@ -22,7 +22,7 @@
       "description": "Ultrabook Asus ROG Flow, AMD Ryzen 9 5900HS  16GB de RAM 1TB SSD, NVIDIA GeForce RTX 3050 Ti 165 Hz",
       "price": "1.360.100",
       "imageUrl": "./images/Asus.jpg",
-      "quantity": 8
+      "quantity": 10
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "description": "Notebook Lenovo Legion, AMD Ryzen 5 4600H 8GB de RAM 1TB HDD 256GB SSD, NVIDIA GeForce GTX 1650 Ti 120 Hz",
       "price": "1.957.000",
       "imageUrl": "./images/Lenovo Legion.jpg",
-      "quantity": 1
+      "quantity": 10
     },
     {
       "id": "5",
@@ -38,7 +38,7 @@
       "description": "MSI Thin GF63 negra, Intel Core i5 9300H 8GB de RAM 256GB SSD, NVIDIA GeForce GTX 1650, Windows 11",
       "price": "1.311.173",
       "imageUrl": "./images/msi1.jpg",
-      "quantity": 5
+      "quantity": 10
     },
     {
       "id": "6",
@@ -70,7 +70,7 @@
       "description": "Auriculares Hyperx Cloud Flight Wireless PC PS4 PS3 BLACK/RED 4P5L4AA",
       "price": "122.989",
       "imageUrl": "./images/auriculares-hyperx-cloud.jpg",
-      "quantity": 9
+      "quantity": 10
     },
     {
       "id": "10",
@@ -110,7 +110,7 @@
       "description": "Silla Gamer VONNE para PC - Roja/Negra",
       "price": "392.584",
       "imageUrl": "./images/silla vonner gamer.jpg",
-      "quantity": 9
+      "quantity": 10
     },
     {
       "id": "15",

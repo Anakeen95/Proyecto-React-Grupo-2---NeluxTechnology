@@ -19,30 +19,22 @@ const Button = ({ quantity, addToCart }) => {
 
   return (
     <div className="button-container">
-      /* Renders the button */
-      // Disables the button if quantity is 0 or less
+      {/* Renders the button */}
+      {/* Disables the button if quantity is 0 or less */}
       <button className="button" onClick={handleClick} disabled={localQuantity <= 0}> 
-        /* Shows button text based on the quantity */
+        {/* Shows button text based on the quantity */}
         {localQuantity > 0 ? 'Agregar al carrito' : 'Sin Stock'}
       </button>
 
-      /* Scoped CSS styles for the button */
+      {/* Scoped CSS styles for the button */}
       <style jsx>{`
         .button-container {
           display: flex;
-<<<<<<< HEAD
-          justify-content: space-between; // Distribute space between buttons
-          gap: 10px; // Space between buttons
-          margin-top: 10px; // Top margin for container
-=======
           justify-content: center;
           gap: 10px;
           align-items:center;
           padding:0px 40px;
           margin-bottom:5px;
-        
-           
->>>>>>> origin/main
         }
         .button {
           flex: 1; // Make button fill available space

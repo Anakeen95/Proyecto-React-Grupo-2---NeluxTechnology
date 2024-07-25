@@ -5,24 +5,17 @@ import React from 'react';
 const Buttoninfo = () => {
   return (
     <div className="button-container">
-      /* Renders the button with text 'Ver Más' */
+      {/* Renders the button with text 'Ver Más' */}
       <button className="button">Ver Más</button>
 
-      /* Scoped CSS styles for the button */
+      {/* Scoped CSS styles for the button */}
       <style jsx>{`
         .button-container {
           display: flex;
-<<<<<<< HEAD
-          justify-content: space-between; // Distribute space between buttons
-          gap: 10px; // Space between buttons
-          margin-top: 10px; // Top margin for container
-=======
           justify-content: center;
           gap: 10px;
           align-items:center;
           padding:0px 40px;
-        
->>>>>>> origin/main
         }   
         .button {
           flex: 1; // Make button fill available space

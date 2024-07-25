@@ -8,10 +8,10 @@ import styles from './SectionCard.module.css';
 const SectionCards = ({ products, addToCart }) => {
   return (
     <section className={styles.section}>
-      /* Section title */
+      {/* Section title */}
       <h2 className={styles.sectionTitle}>Nuestros Productos</h2>
       
-      /* Renders Cards component with products and addToCart props */
+      {/* Renders Cards component with products and addToCart props */}
       <Cards products={products} addToCart={addToCart} />
     </section>
   );

@@ -1,8 +1,8 @@
 
 // Imports the necessary modules and components
 import React from 'react';
-import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap'; // Importing components from Reactstrap for modal functionality
-import styles from "./Cards.module.css"; // Importing CSS module for styling
+import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap';
+import styles from "./Cards.module.css"; 
 
 // Main component for the productmodal page
 const ProductsModal = ({ product, onClose, isOpen }) => {
@@ -11,24 +11,24 @@ const ProductsModal = ({ product, onClose, isOpen }) => {
 
   return (
     <Modal isOpen={isOpen} toggle={onClose}>
-      /* Modal Header */
+      {/* Modal Header */}
       <ModalHeader toggle={onClose}>Información del Producto</ModalHeader>
       
-      /* Modal Body: Displays product information */
+      {/* Modal Body: Displays product information */}
       <ModalBody>
-        /* Product image */
+        {/* Product image */}
         <img src={product.imageUrl} alt={product.name} className={styles.img}/>
         <div>
-          /* Product name */
+          {/* Product name */}
           <h5 className={styles.cardTitle}>{product.name}</h5>
-          /* Product description */
+          {/* Product description */}
           <p className={styles.cardText}>{product.description}</p>
-          /* Product price */
+          {/* Product price */}
           <h4 className={styles.cardPrice}>${product.price}</h4>
         </div>
       </ModalBody>
       
-      /* Modal Footer: Contains the close button */
+      {/* Modal Footer: Contains the close button */}
       <ModalFooter>
         <Button color="secondary" onClick={onClose}>Cerrar</Button>
       </ModalFooter>
