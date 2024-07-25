@@ -2,15 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 :root {
   --foreground-rgb: 249, 249, 249;
   --background-start-rgb: 249, 249, 249;
   --background-end-rgb: 249, 249, 249;
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 249, 249, 249;
@@ -18,7 +14,6 @@
     --background-end-rgb: 249, 249, 249;
   }
 }
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(to bottom,
@@ -26,7 +21,6 @@ body {
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   font-family: 'Quicksand', sans-serif;
 }
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
