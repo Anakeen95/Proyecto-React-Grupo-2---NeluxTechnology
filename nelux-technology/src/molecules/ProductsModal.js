@@ -17,7 +17,7 @@ const ProductsModal = ({ product, onClose, isOpen }) => {
       /* Modal Body: Displays product information */
       <ModalBody>
         /* Product image */
-        <img src={product.imageUrl} alt={product.name} className={styles.img} />
+        <img src={product.imageUrl} alt={product.name} className={styles.img}/>
         <div>
           /* Product name */
           <h5 className={styles.cardTitle}>{product.name}</h5>

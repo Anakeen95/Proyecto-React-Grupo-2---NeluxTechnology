@@ -66,6 +66,7 @@
 .cartLogo {
     margin-right: 2rem;
     position: relative; /* Añadido para el posicionamiento del contador */
+    cursor: pointer;
 }
 
 .cartLogo img {

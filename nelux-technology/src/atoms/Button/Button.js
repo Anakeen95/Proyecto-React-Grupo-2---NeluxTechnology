@@ -30,9 +30,19 @@ const Button = ({ quantity, addToCart }) => {
       <style jsx>{`
         .button-container {
           display: flex;
+<<<<<<< HEAD
           justify-content: space-between; // Distribute space between buttons
           gap: 10px; // Space between buttons
           margin-top: 10px; // Top margin for container
+=======
+          justify-content: center;
+          gap: 10px;
+          align-items:center;
+          padding:0px 40px;
+          margin-bottom:5px;
+        
+           
+>>>>>>> origin/main
         }
         .button {
           flex: 1; // Make button fill available space

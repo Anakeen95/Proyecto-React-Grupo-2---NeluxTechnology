@@ -5,6 +5,7 @@ import SectionCard from "../molecules/SectionCards"
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
+import Cart from "../molecules/Cart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carrousel from "../organisms/Carrousel/CarrouselComponent";
 
@@ -14,6 +15,7 @@ const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
   const [products, setProducts] = useState([]);
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   useEffect(() => {
     // Function to fetch product data from the API
@@ -102,6 +104,14 @@ const Index = () => {
     }
   };
 
+  const removeFromCart = (productId) => {
+    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+  };
+
+  const clearCart = () => {
+    setCart([]);
+  };
+
   useEffect(() => {
     // Updates the cart count whenever the cart state changes
     setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
@@ -129,6 +139,10 @@ const Index = () => {
       /* Footer section */
       <section id="Contact">
         <Footer/>
+      </section>
+      <section>
+      /* Cart section with cart actions */
+      <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart}  closeCart={toggleCart}  isCartOpen={isCartOpen}/>
       </section>
     </main>
   );
