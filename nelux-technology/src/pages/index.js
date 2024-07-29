@@ -95,18 +95,24 @@ const Index = () => {
 
   return (
     <main>
-      <section id="Navigation"><Nav cartCount={cartCount} toggleCart={toggleCart} /></section>
-      <section id="Home"><BannerHome /></section>
-      <section id="Products"><SectionCard products={products} addToCart={addToCart} /></section>
-      <section id="Gallery"><Carrousel /></section>
-      <section id="Contact"><Footer /></section>
-      <Cart 
-        cartItems={cart} 
-        removeFromCart={removeFromCart} 
-        clearCart={clearCart} 
-        closeCart={toggleCart} 
-        isCartOpen={isCartOpen} 
-      />
+      <section id="Navigation">
+        <Nav cartCount={cartCount} toggleCart={toggleCart}/>
+      </section>
+      <section id="Home">
+        <BannerHome/>
+      </section>
+      <section id="Products">
+        <SectionCard products={products} addToCart={addToCart}/>
+      </section>
+      <section id="Gallery">
+        <Carrousel/>
+      </section>
+      <section id="Contact">
+        <Footer/>
+      </section>
+      <section>
+      <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} closeCart={toggleCart} isCartOpen={isCartOpen}/>
+      </section>
     </main>
   );
 };

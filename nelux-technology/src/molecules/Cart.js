@@ -13,7 +13,9 @@ const Cart = ({ cartItems, removeFromCart, clearCart, closeCart, isCartOpen }) =
           </svg>
         </button>
         <div className={styles.cartHeader}>
-          <h3>Carrito de Compras</h3>
+          <h3>
+            Carrito de Compras
+          </h3>
         </div>
         {cartItems.length === 0 ? (
           <p>
@@ -21,13 +23,13 @@ const Cart = ({ cartItems, removeFromCart, clearCart, closeCart, isCartOpen }) =
           </p>
         ) : (
           <ul className={styles.cartItems}>
-            {cartItems.map(item => (
-              <CartItem key={item.id} item={item} removeFromCart={removeFromCart}/>
-            ))}
+            {cartItems.map(item => (<CartItem key={item.id} item={item} removeFromCart={removeFromCart}/>))}
           </ul>
         )}
         <div className={styles.cartActions}>
-          <button className={styles.clearButton} onClick={clearCart}>Vaciar Carrito</button>
+          <button className={styles.clearButton} onClick={clearCart}>
+            Vaciar Carrito
+          </button>
         </div>
       </div>
     </div>

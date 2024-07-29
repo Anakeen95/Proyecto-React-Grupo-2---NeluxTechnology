@@ -7,17 +7,13 @@
   align-items: center;
   margin-bottom: 4rem;
 }
-
 /* Estilos para la imagen */
 .homeImg {
   width: 100vw;
   height: auto;
   object-fit: cover;
-
 }
-
 /* Media queries para ajustar el banner en pantallas más pequeñas */
-
 @media (max-width: 600px) {
   .homeContainer {
     height: calc(100vh - 60px);
@@ -26,10 +22,8 @@
     margin-bottom: 3rem;
     /* Altura del banner para pantallas más chicas */
   }
-
   .homeImg {
     height: 100vh;
     object-fit: cover;
   }
-
 }

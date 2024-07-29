@@ -21,12 +21,11 @@ const Cards = ({ addToCart }) => {
   return (
     <>
     <div className={styles.productList}>
-      {products.map(product => (
-        <ProductCard key={product.id} product={product} addToCart={addToCart}/> 
-      ))}
+      {products.map(product => (<ProductCard key={product.id} product={product} addToCart={addToCart}/>))}
     </div> 
   </>
   );  
 };
+
 
 export default Cards;

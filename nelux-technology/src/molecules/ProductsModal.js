@@ -7,26 +7,30 @@ const ProductsModal = ({ product, onClose, isOpen }) => {
   console.log("modal de producto", product, onClose, isOpen)
   return (
     <Modal isOpen={isOpen} toggle={onClose}>
-      <ModalHeader toggle={onClose}>Información del Producto</ModalHeader>
+      <ModalHeader toggle={onClose}>
+        Información del Producto
+      </ModalHeader>
       <ModalBody className={styles.bodyModal}>
-        <img src={product.imageUrl} alt={product.name} className={styles.cardImg} />
+        <img src={product.imageUrl} alt={product.name} className={styles.cardImg}/>
         <div>
-          <h5 className={styles.cardTitle}>{product.name}</h5>
-          <p className={styles.cardText}>{product.description}</p>
-          <h4 className={styles.cardPrice}>${product.price}</h4>
+          <h5 className={styles.cardTitle}>
+            {product.name}
+          </h5>
+          <p className={styles.cardText}>
+            {product.description}
+          </p>
+          <h4 className={styles.cardPrice}>
+            ${product.price}
+          </h4>
         </div>
       </ModalBody>
       <ModalFooter>
-        <Button color="secondary" onClick={onClose}>Cerrar</Button>
+        <Button color="secondary" onClick={onClose}>
+          Cerrar
+        </Button>
       </ModalFooter>
     </Modal>
   );
 };
 
 export default ProductsModal;
-
-//FUNCIONA PERO TIRA ERROR DE BOOTSTRAP
-
-
-
-//"react-transition-group": "^4.4.2"

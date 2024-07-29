@@ -13,23 +13,18 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
     z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
-
 .navScrolled {
     background-color: #000; /* Color de fondo cuando el usuario hace scroll */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Agrega sombra cuando scrollea */
 }
-
 /* Estilos del logo */
 .logo {
     margin-left: 2rem;
 }
-
 .logo img {
     height: 50px;
     width: auto;
 }
-
-
 /* Estilos del menú de navegación */
 .navBar {
     display: flex;
@@ -42,40 +37,31 @@
     position: relative;
     /* Ajuste para mantener flujo normal */
 }
-
 .navBarItem {
     padding: 1rem;
     margin: 2px;
 }
-
 .navBarItem:hover {
     color: white;
 }
-
 .navBarLink {
     text-decoration: none;
     color: #00FDFB;
     transition: color 0.3s ease-in-out;
 }
-
 .navBarLink:hover {
     color: white;
 }
-
 /* Estilos del icono de carrito */
 .cartLogo {
     margin-right: 2rem;
     position: relative; /* Añadido para el posicionamiento del contador */
     cursor: pointer;
 }
-
 .cartLogo img {
     height: 25px;
     width: auto;
 }
-
-
-
 /* Estilos del contador del carrito */
 .cartCount {
     background-color: #ff0000; /* Color de fondo rojo para el contador */
@@ -92,7 +78,6 @@
     right: -5px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.3); /* Sombra sutil */
 }
-
 /* Estilos del menú hamburguesa */
 .burgerMenu {
     display: none;
@@ -103,7 +88,6 @@
     right: 1rem;
     z-index: 999;
 }
-
 .burgerLine {
     width: 25px;
     height: 3px;
@@ -111,11 +95,9 @@
     margin: 4px;
     transition: all 0.3s ease;
 }
-
 .burgerLineOpen {
     transform: rotate(45deg);
 }
-
 /* Media query para pantallas pequeñas (max-width: 600px) */
 @media (max-width: 600px) {
     .nav {
@@ -125,7 +107,6 @@
         padding: 0.5rem 1rem;
         margin: 0px;
     }
-
     .navBar {
         flex-direction: column;
         width: 100vw;
@@ -138,37 +119,30 @@
         opacity: 0;
         transition: right 0.3s ease, opacity 0.3s ease;
     }
-
     .navBarOpen {
         right: 0;
         opacity: 1;
     }
-
     .navBarItem {
         width: 100%;
         padding-top: 16px;
         text-align: center;
 
     }
-
-
     .cartLogo {
         order: 3;
         margin-right: 3rem;
     }
-
     .burgerMenu {
         display: flex;
     }
 }
-
 /* Media query para pantallas grandes (min-width: 769px) */
 @media (min-width: 601px) {
     .burgerMenu {
         display: none;
         /* Ocultar el menú hamburguesa en pantallas grandes */
     }
-
     .navBar {
         display: flex;
         /* Mostrar el menú de navegación */
@@ -180,14 +154,12 @@
         /* Alinear verticalmente con los iconos */
 
     }
-
     .navBarItem {
         padding: 1rem;
         /* Ajustar el espaciado */
         margin: 0;
         /* Eliminar margen para alinear con los iconos */
     }
-
     .logo,
     .cartLogo {
         display: flex;

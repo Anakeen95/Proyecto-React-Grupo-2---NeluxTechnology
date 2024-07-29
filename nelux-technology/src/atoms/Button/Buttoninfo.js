@@ -3,7 +3,9 @@ import React from 'react';
 const Buttoninfo = () => {
   return (
     <div className="button-container">
-      <button className="button">Ver Más</button>
+      <button className="button">
+        Ver Más
+      </button>
 
       <style jsx>{`
         .button-container {
@@ -12,7 +14,6 @@ const Buttoninfo = () => {
           gap: 10px;
           align-items:center;
           padding:0px 40px;
-        
         }   
         .button {
           flex: 1; 

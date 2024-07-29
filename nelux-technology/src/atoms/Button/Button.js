@@ -24,8 +24,6 @@ const Button = ({ quantity, addToCart }) => {
           align-items:center;
           padding:0px 40px;
           margin-bottom:5px;
-        
-           
         }
         .button {
           flex: 1; 
