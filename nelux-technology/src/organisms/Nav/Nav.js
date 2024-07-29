@@ -32,17 +32,23 @@ const Nav = ({ cartCount, toggleCart }) => {
     return (
         <div className={`${styles.nav} ${isScrolled ? styles.navScrolled : ''}`}>
             <div className={styles.logo}>
-                <img src="./images/NeluxTech-Isotipo-Negro.png" alt="Logo" />
+                <img src="./images/NeluxTech-Isotipo-Negro.png" alt="Logo"/>
             </div>
             <ul className={`${styles.navBar} ${isOpen ? styles.navBarOpen : ''}`}>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Products" onClick={handleCloseMenu}>Productos</a>
+                    <a className={styles.navBarLink} href="#Products" onClick={handleCloseMenu}>
+                        Productos
+                    </a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Gallery" onClick={handleCloseMenu}>Galería</a>
+                    <a className={styles.navBarLink} href="#Gallery" onClick={handleCloseMenu}>
+                        Galería
+                    </a>
                 </li>
                 <li className={styles.navBarItem}>
-                    <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>Contacto</a>
+                    <a className={styles.navBarLink} href="#Contact" onClick={handleCloseMenu}>
+                        Contacto
+                    </a>
                 </li>
             </ul>
             <div className={styles.cartLogo} onClick={toggleCart}>

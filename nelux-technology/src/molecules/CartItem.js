@@ -1,16 +1,32 @@
 import React from 'react';
 import styles from './CartItem.module.css';
 
-const CartItem = ({ item, removeFromCart }) => {
+const CartItem = ({ item, incrementQuantity, decrementQuantity, removeFromCart }) => {
   return (
     <li className={styles.cartItem}>
-      <img src={item.imageUrl} alt={item.name} className={styles.cartItemImg} />
+      <img src={item.imageUrl} alt={item.name} className={styles.cartItemImg}/>
       <div className={styles.cartItemDetails}>
-        <h4>{item.name}</h4>
-        <p>${item.price}</p>
-        <p>Cantidad: {item.quantity}</p>
+        <h4>
+          {item.name}
+        </h4>
+        <p>
+          ${parseInt(item.price.replace(/\./g, ''), 10) * item.quantity}
+        </p>
+        <p>
+          Cantidad: {item.quantity}
+        </p>
       </div>
-      <button className={styles.removeButton} onClick={() => removeFromCart(item.id)}>Eliminar</button>
+      <div className={styles.quantityButtons}>
+        <button className={styles.removeButton} onClick={() => removeFromCart(item.id)}>
+          Eliminar
+        </button>
+        <button className={styles.quantityButton} onClick={() => incrementQuantity(item.id)} disabled={item.quantity >= 10}>
+          +
+        </button>
+        <button className={styles.quantityButton} onClick={() => decrementQuantity(item.id)} disabled={item.quantity <= 1}>
+          -
+        </button>
+      </div>
     </li>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styles from './CartCardModal.module.css';
 
-
 const Modal = ({ message, onClose }) => {
   const [visible, setVisible] = useState(true);
 
@@ -22,8 +21,10 @@ const Modal = ({ message, onClose }) => {
     <div className={styles.modalOverlay}>
       <div className={styles.modalContent}>
         <div className={styles.modalInner}>
-        <img src="/checkmark.png" alt="Checkmark" className={styles.modalImage} />
-          <p>{message}</p>
+        <img src="/checkmark.png" alt="Checkmark" className={styles.modalImage}/>
+          <p>
+            {message}
+          </p>
         </div>
       </div>
     </div>
