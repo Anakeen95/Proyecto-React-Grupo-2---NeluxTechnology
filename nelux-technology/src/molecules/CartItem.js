@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './CartItem.module.css';
 
-const CartItem = ({ item, removeFromCart }) => {
+const CartItem = ({ item, addToCart, removeFromCart }) => {
   return (
     <li className={styles.cartItem}>
       <img src={item.imageUrl} alt={item.name} className={styles.cartItemImg}/>
