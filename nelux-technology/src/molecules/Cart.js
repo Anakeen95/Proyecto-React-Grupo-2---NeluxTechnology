@@ -2,7 +2,7 @@ import React from 'react';
 import CartItem from './CartItem';
 import styles from './Cart.module.css';
 
-const Cart = ({ cartItems, removeFromCart, clearCart, closeCart, isCartOpen }) => {
+const Cart = ({ cartItems, removeFromCart, clearCart, closeCart, isCartOpen, incrementQuantity, decrementQuantity }) => {
   return (
     <div className={`${styles.cartContainer} ${isCartOpen ? styles.show : ''}`}>
       <div className={styles.cartContent}>
@@ -23,7 +23,9 @@ const Cart = ({ cartItems, removeFromCart, clearCart, closeCart, isCartOpen }) =
           </p>
         ) : (
           <ul className={styles.cartItems}>
-            {cartItems.map(item => (<CartItem key={item.id} item={item} removeFromCart={removeFromCart}/>))}
+            {cartItems.map(item => (
+              <CartItem key={item.id} item={item} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity} removeFromCart={removeFromCart}/>
+            ))}
           </ul>
         )}
         <div className={styles.cartActions}>

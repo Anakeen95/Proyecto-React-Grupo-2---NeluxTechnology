@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SectionCard from "../molecules/SectionCards"
+import SectionCard from "../molecules/SectionCards";
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
@@ -64,13 +64,13 @@ const Index = () => {
     try {
       const response = await axios.get('http://localhost:3000/Products');
       const products = response.data;
-  
+
       const updatePromises = products.map(product =>
         axios.patch(`http://localhost:3000/Products/${product.id}`, {
           quantity: 10
         })
       );
-  
+
       await Promise.all(updatePromises);
     } catch (error) {
       console.error('Error resetting product quantities:', error.response ? error.response.data : error.message);
@@ -79,6 +79,48 @@ const Index = () => {
 
   const removeFromCart = (productId) => {
     setCart(prevCart => prevCart.filter(item => item.id !== productId));
+  };
+
+  const incrementQuantity = async (productId) => {
+    try {
+      const product = cart.find(item => item.id === productId);
+      if (!product || product.quantity >= 10) return;
+
+      await axios.patch(`http://localhost:3000/Products/${productId}`, {
+        quantity: product.quantity + 1
+      });
+
+      setCart(prevCart =>
+        prevCart.map(item =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
+      );
+    } catch (error) {
+      console.error('Error incrementing quantity:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  const decrementQuantity = async (productId) => {
+    try {
+      const product = cart.find(item => item.id === productId);
+      if (!product || product.quantity <= 1) return;
+
+      await axios.patch(`http://localhost:3000/Products/${productId}`, {
+        quantity: product.quantity - 1
+      });
+
+      setCart(prevCart =>
+        prevCart.map(item =>
+          item.id === productId
+            ? { ...item, quantity: item.quantity - 1 }
+            : item
+        )
+      );
+    } catch (error) {
+      console.error('Error decrementing quantity:', error.response ? error.response.data : error.message);
+    }
   };
 
   const clearCart = () => {
@@ -96,25 +138,27 @@ const Index = () => {
   return (
     <main>
       <section id="Navigation">
-        <Nav cartCount={cartCount} toggleCart={toggleCart}/>
+        <Nav cartCount={cartCount} toggleCart={toggleCart} />
       </section>
       <section id="Home">
-        <BannerHome/>
+        <BannerHome />
       </section>
       <section id="Products">
-        <SectionCard products={products} addToCart={addToCart}/>
+        <SectionCard products={products} addToCart={addToCart} />
       </section>
       <section id="Gallery">
-        <Carrousel/>
+        <Carrousel />
       </section>
       <section id="Contact">
-        <Footer/>
+        <Footer />
       </section>
       <section>
-      <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} closeCart={toggleCart} isCartOpen={isCartOpen}/>
+        <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} closeCart={toggleCart} isCartOpen={isCartOpen} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>
       </section>
     </main>
   );
 };
 
 export default Index;
+
+
