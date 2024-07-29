@@ -11,7 +11,7 @@ const Buttoninfo = () => {
           justify-content: center;
           gap: 10px;
           align-items:center;
-          padding:0px 40px;
+          padding:0px 50px;
         
         }   
         .button {

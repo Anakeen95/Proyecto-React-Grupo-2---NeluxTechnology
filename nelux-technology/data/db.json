@@ -14,7 +14,7 @@
       "description": "Notebook Hp Victus 16-d0516la 15.6, Intel Core I5 8gb 512gb Windows 11 Color Azul, Gris, Negra",
       "price": "1.079.999",
       "imageUrl": "./images/Hp Victus.jpg",
-      "quantity": 6
+      "quantity": 10
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "description": "Ultrabook Asus ROG Flow, AMD Ryzen 9 5900HS  16GB de RAM 1TB SSD, NVIDIA GeForce RTX 3050 Ti 165 Hz",
       "price": "1.360.100",
       "imageUrl": "./images/Asus.jpg",
-      "quantity": 9
+      "quantity": 10
     },
     {
       "id": "4",
@@ -30,7 +30,7 @@
       "description": "Notebook Lenovo Legion, AMD Ryzen 5 4600H 8GB de RAM 1TB HDD 256GB SSD, NVIDIA GeForce GTX 1650 Ti 120 Hz",
       "price": "1.957.000",
       "imageUrl": "./images/Lenovo Legion.jpg",
-      "quantity": 6
+      "quantity": 10
     },
     {
       "id": "5",
