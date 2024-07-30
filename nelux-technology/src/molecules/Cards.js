@@ -27,5 +27,4 @@ const Cards = ({ addToCart }) => {
   );  
 };
 
-
 export default Cards;
