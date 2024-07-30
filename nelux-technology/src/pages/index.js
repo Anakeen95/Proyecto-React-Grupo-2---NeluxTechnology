@@ -73,53 +73,62 @@ const Index = () => {
 
       await Promise.all(updatePromises);
     } catch (error) {
-      console.error('Error resetting product quantities:', error.response ? error.response.data : error.message);
+      console.error('Error resetting products quantities:', error.response ? error.response.data : error.message);
     }
   };
 
-  const removeFromCart = (productId) => {
-    setCart(prevCart => prevCart.filter(item => item.id !== productId));
+  const removeFromCart = async (productId) => {
+    try {
+      const response = await axios.get(`http://localhost:3000/Products/${productId}`);
+      const updatedProduct = response.data;
+      
+      if (updatedProduct.quantity <= 0) return;
+      
+      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
+        quantity: 10
+      });
+
+      setCart(prevCart => prevCart.filter(item => item.id !== productId));
+    } catch (error) {
+      console.error('Error resetting product quantity', error.response ? error.response.data : error.message);
+    }
   };
 
   const incrementQuantity = async (productId) => {
-    try {
-      const product = cart.find(item => item.id === productId);
+    const product = cart.find(item => item.id === productId);
       if (!product || product.quantity >= 10) return;
 
-      await axios.patch(`http://localhost:3000/Products/${productId}`, {
-        quantity: product.quantity + 1
-      });
-
-      setCart(prevCart =>
-        prevCart.map(item =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity + 1 }
-            : item
-        )
-      );
-    } catch (error) {
-      console.error('Error incrementing quantity:', error.response ? error.response.data : error.message);
-    }
+      addToCart(product);
   };
 
   const decrementQuantity = async (productId) => {
     try {
       const product = cart.find(item => item.id === productId);
-      if (!product || product.quantity <= 1) return;
+      if (!product || product.quantity < 1) return;
 
-      await axios.patch(`http://localhost:3000/Products/${productId}`, {
-        quantity: product.quantity - 1
+      const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
+      const updatedProduct = response.data;
+
+      if (updatedProduct.quantity <= 0) return;
+
+      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
+        quantity: updatedProduct.quantity + 1,
       });
 
-      setCart(prevCart =>
-        prevCart.map(item =>
-          item.id === productId
-            ? { ...item, quantity: item.quantity - 1 }
-            : item
-        )
-      );
+      const existingProductIndex = cart.findIndex(item => item.id === product.id);
+
+      if (existingProductIndex !== -1) {
+        const updatedCart = [...cart];
+        updatedCart[existingProductIndex] = {
+          ...updatedCart[existingProductIndex],
+          quantity: updatedCart[existingProductIndex].quantity - 1
+        };
+        setCart(updatedCart);
+      } else {
+        setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
+      }
     } catch (error) {
-      console.error('Error decrementing quantity:', error.response ? error.response.data : error.message);
+      console.error('Error removing from cart:', error.response ? error.response.data : error.message);
     }
   };
 
@@ -138,19 +147,19 @@ const Index = () => {
   return (
     <main>
       <section id="Navigation">
-        <Nav cartCount={cartCount} toggleCart={toggleCart} />
+        <Nav cartCount={cartCount} toggleCart={toggleCart}/>
       </section>
       <section id="Home">
-        <BannerHome />
+        <BannerHome/>
       </section>
       <section id="Products">
-        <SectionCard products={products} addToCart={addToCart} />
+        <SectionCard products={products} addToCart={addToCart}/>
       </section>
       <section id="Gallery">
-        <Carrousel />
+        <Carrousel/>
       </section>
       <section id="Contact">
-        <Footer />
+        <Footer/>
       </section>
       <section>
         <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} closeCart={toggleCart} isCartOpen={isCartOpen} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>

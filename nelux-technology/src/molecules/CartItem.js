@@ -23,8 +23,11 @@ const CartItem = ({ item, incrementQuantity, decrementQuantity, removeFromCart }
         <button className={styles.quantityButton} onClick={() => incrementQuantity(item.id)} disabled={item.quantity >= 10}>
           +
         </button>
-        <button className={styles.quantityButton} onClick={() => decrementQuantity(item.id)} disabled={item.quantity <= 1}>
+        <button className={styles.quantityButton} onClick={() => decrementQuantity(item.id)} disabled={item.quantity < 1}>
           -
+        </button>
+        <button className={styles.payButton} onClick={() => alert('Pagar')}>
+          Pagar
         </button>
       </div>
     </li>
