@@ -1,0 +1,40 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modalContent {
+    background: #1D1D1B;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.confirmButton {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.confirmButton:hover {
+    background-color: #06512d;
+}
+.closeButton {
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+.closeButton:hover {
+    background-color: #6d040e;
+}
+  
