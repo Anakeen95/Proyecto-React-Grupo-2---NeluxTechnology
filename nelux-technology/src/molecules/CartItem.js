@@ -37,7 +37,7 @@ const CartItem = ({ item, incrementQuantity, decrementQuantity, removeFromCart }
         <button className={styles.quantityButton} onClick={() => decrementQuantity(item.id)} disabled={item.quantity < 1}>
           -
         </button>
-        <button className={styles.payButton} onClick={openModal}>
+        <button className={styles.payButton} onClick={openModal} disabled={item.quantity < 1}>
           Pagar
         </button>
         <Modal2 isOpen={isModalOpen} onClose={closeModal} onConfirm={confirmPayment}/>

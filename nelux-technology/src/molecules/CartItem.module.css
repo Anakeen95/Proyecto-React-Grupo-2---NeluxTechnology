@@ -70,3 +70,8 @@
 .payButton:active {
   color: #3e8e41; /* Color de texto verde más oscuro */
 }
+.payButton:disabled {
+  color: #6c757d; /* Color de texto cuando está deshabilitado */
+  cursor: not-allowed;
+  opacity: 0.65; /* Menor opacidad para indicar deshabilitado */
+}
