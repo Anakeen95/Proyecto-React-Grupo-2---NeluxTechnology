@@ -33,8 +33,6 @@ const Index = () => {
       const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
       const updatedProduct = response.data;
 
-      //if (updatedProduct.quantity <= 0) return;
-
       await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
         quantity: updatedProduct.quantity - 1,
       });
@@ -81,9 +79,7 @@ const Index = () => {
     try {
       const response = await axios.get(`http://localhost:3000/Products/${productId}`);
       const updatedProduct = response.data;
-      
-      //if (updatedProduct.quantity <= 0) return;
-      
+
       await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
         quantity: 10
       });
@@ -108,9 +104,7 @@ const Index = () => {
 
       const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
       const updatedProduct = response.data;
-
-      //if (updatedProduct.quantity <= 0) return;
-
+      
       await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
         quantity: updatedProduct.quantity + 1,
       });
