@@ -1,0 +1,18 @@
+/* src/pages/index.module.css */
+.cartContainer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 400px;
+    background-color: rgb(51, 49, 49);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+    transform: translateX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1001;
+  }
+  
+  .cartContainer.closed {
+    transform: translateX(100%);
+  }
+  

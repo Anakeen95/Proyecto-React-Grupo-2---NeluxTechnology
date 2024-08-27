@@ -1,167 +1,117 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import SectionCard from "../molecules/SectionCards";
 import Footer from "../organisms/Footer/Footer";
 import Nav from "../organisms/Nav/Nav";
 import BannerHome from "../organisms/Banner/BannerHome";
-import Cart from "../molecules/Cart";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Carrousel from "../organisms/Carrousel/CarrouselComponent";
+import SectionCards from '../molecules/SectionCards';
+import CartSidebar from '../molecules/CartSidebar'; // Asegúrate de importar el componente
+import ContactForm from '../molecules/ContactForm'; // Importa el nuevo componente
 
 const Index = () => {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
-  const [products, setProducts] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('http://localhost:3000/Products');
-        setProducts(response.data);
-      } catch (error) {
-        console.error('Error fetching products:', error.response ? error.response.data : error.message);
-      }
-    };
-
-    fetchProducts();
-    resetProductQuantities();
-  }, []);
-
-  const addToCart = async (product) => {
-    try {
-      const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
-      const updatedProduct = response.data;
-
-      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
-        quantity: updatedProduct.quantity - 1,
-      });
-
-      updateCart(updatedProduct);
-    } catch (error) {
-      console.error('Error adding to cart:', error.response ? error.response.data : error.message);
-    }
-  };
-
-  const updateCart = (product) => {
-    const existingProductIndex = cart.findIndex(item => item.id === product.id);
-
-    if (existingProductIndex !== -1) {
-      const updatedCart = [...cart];
-      updatedCart[existingProductIndex] = {
-        ...updatedCart[existingProductIndex],
-        quantity: updatedCart[existingProductIndex].quantity + 1
-      };
-      setCart(updatedCart);
-    } else {
-      setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
-    }
-  };
-
-  const resetProductQuantities = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/Products');
-      const products = response.data;
-
-      const updatePromises = products.map(product =>
-        axios.patch(`http://localhost:3000/Products/${product.id}`, {
-          quantity: 10
-        })
-      );
-
-      await Promise.all(updatePromises);
-    } catch (error) {
-      console.error('Error resetting products quantities:', error.response ? error.response.data : error.message);
-    }
-  };
-
-  const removeFromCart = async (productId) => {
-    try {
-      const response = await axios.get(`http://localhost:3000/Products/${productId}`);
-      const updatedProduct = response.data;
-
-      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
-        quantity: 10
-      });
-
-      setCart(prevCart => prevCart.filter(item => item.id !== productId));
-    } catch (error) {
-      console.error('Error resetting product quantity', error.response ? error.response.data : error.message);
-    }
-  };
-
-  const incrementQuantity = async (productId) => {
-    const product = cart.find(item => item.id === productId);
-      if (!product || product.quantity >= 10) return;
-
-      addToCart(product);
-  };
-
-  const decrementQuantity = async (productId) => {
-    try {
-      const product = cart.find(item => item.id === productId);
-      if (!product || product.quantity < 1) return;
-
-      const response = await axios.get(`http://localhost:3000/Products/${product.id}`);
-      const updatedProduct = response.data;
-      
-      await axios.patch(`http://localhost:3000/Products/${updatedProduct.id}`, {
-        quantity: updatedProduct.quantity + 1,
-      });
-
-      const existingProductIndex = cart.findIndex(item => item.id === product.id);
-
-      if (existingProductIndex !== -1) {
-        const updatedCart = [...cart];
-        updatedCart[existingProductIndex] = {
-          ...updatedCart[existingProductIndex],
-          quantity: updatedCart[existingProductIndex].quantity - 1
-        };
-        setCart(updatedCart);
-      } else {
-        setCart(prevCart => [...prevCart, { ...product, quantity: 1 }]);
-      }
-    } catch (error) {
-      console.error('Error removing from cart:', error.response ? error.response.data : error.message);
-    }
-  };
-
-  const clearCart = () => {
-    setCart([]);
-  };
-
-  useEffect(() => {
-    setCartCount(cart.reduce((total, item) => total + item.quantity, 0));
-  }, [cart]);
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false); // Nuevo estado para el formulario de contacto
 
   const toggleCart = () => {
     setIsCartOpen(!isCartOpen);
   };
 
+  const toggleContactForm = () => {
+    setIsContactFormOpen(!isContactFormOpen);
+  };
+
+  const addToCart = async (productId) => {
+    try {
+      const response = await axios.get(`http://localhost:4000/api/products/${productId}`);
+      const product = response.data;
+
+      setCart(prevCart => {
+        const existingProduct = prevCart.find(item => item.id === product.id);
+        if (existingProduct) {
+          return prevCart.map(item =>
+            item.id === product.id
+              ? { ...item, cartQuantity: item.cartQuantity + 1 }
+              : item
+          );
+        } else {
+          return [...prevCart, { ...product, cartQuantity: 1 }];
+        }
+      });
+
+      await axios.put(`http://localhost:4000/api/products/${productId}/updateStock`, {
+        quantity: -1,
+      });
+    } catch (error) {
+      console.error('Error al agregar al carrito:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  const removeFromCart = async (productId) => {
+    try {
+      const product = cart.find(item => item.id === productId);
+
+      await axios.put(`http://localhost:4000/api/products/${productId}/returnStock`, {
+        quantity: product.cartQuantity,
+      });
+
+      setCart(prevCart => prevCart.filter(item => item.id !== productId));
+    } catch (error) {
+      console.error('Error al eliminar del carrito:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  const updateCartQuantity = async (productId, delta) => {
+    try {
+      const product = cart.find(item => item.id === productId);
+
+      if (delta === -1 && product.cartQuantity <= 1) return;
+      if (delta === 1 && product.quantity <= 0) return;
+
+      setCart(prevCart => prevCart.map(item =>
+        item.id === productId
+          ? { ...item, cartQuantity: item.cartQuantity + delta }
+          : item
+      ));
+
+      await axios.put(`http://localhost:4000/api/products/${productId}/updateStock`, {
+        quantity: -delta,
+      });
+    } catch (error) {
+      console.error('Error al actualizar la cantidad del carrito:', error.response ? error.response.data : error.message);
+    }
+  };
+
+  useEffect(() => {
+    setCartCount(cart.reduce((total, item) => total + item.cartQuantity, 0));
+  }, [cart]);
+
   return (
     <main>
-      <section id="Navigation">
-        <Nav cartCount={cartCount} toggleCart={toggleCart}/>
-      </section>
-      <section id="Home">
-        <BannerHome/>
-      </section>
-      <section id="Products">
-        <SectionCard products={products} addToCart={addToCart}/>
-      </section>
-      <section id="Gallery">
-        <Carrousel/>
-      </section>
-      <section id="Contact">
-        <Footer/>
-      </section>
-      <section>
-        <Cart cartItems={cart} removeFromCart={removeFromCart} clearCart={clearCart} closeCart={toggleCart} isCartOpen={isCartOpen} incrementQuantity={incrementQuantity} decrementQuantity={decrementQuantity}/>
-      </section>
+      <Nav cartCount={cartCount} toggleCart={toggleCart} toggleContactForm={toggleContactForm} />
+      <div id="Home">
+        <BannerHome />
+      </div>
+      <div id="Products">
+        <SectionCards addToCart={addToCart}/> 
+      </div>
+      <div id="Gallery">
+        <Carrousel />
+      </div>
+        <Footer />
+      <CartSidebar 
+        isOpen={isCartOpen} 
+        cart={cart} 
+        setCart={setCart} 
+        removeFromCart={removeFromCart} 
+        updateCartQuantity={updateCartQuantity}
+        toggleCart={toggleCart}
+      />
+      <ContactForm isOpen={isContactFormOpen} toggleForm={toggleContactForm} /> 
     </main>
   );
 };
 
 export default Index;
-
-

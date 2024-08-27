@@ -1,15 +1,14 @@
 import React from 'react';
-import Cards from './Cards';
 import styles from './SectionCard.module.css';
+import Cards from './Cards';
 
-const SectionCards = ({ products, addToCart }) => {
+const SectionCards = ({ addToCart }) => {
   return (
     <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>
-        Nuestros Productos
-      </h2>
-      <Cards products={products} addToCart={addToCart}/>
+      <h2 className={styles.sectionTitle}>Nuestros Productos</h2>
+      <Cards addToCart={addToCart} />
     </section>
   );
 };
+
 export default SectionCards;

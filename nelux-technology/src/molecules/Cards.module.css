@@ -6,9 +6,10 @@
   border: 1px solid #fdfafa;
   border-radius: 8px;
   overflow: hidden;
-  width: 250px;
+  width: 200px;
   text-align: center;
-  //box-shadow: 0.3px 0.3px 0.3px 0.3px black;
+  margin-top: 10px;
+  /*box-shadow: 0.3px 0.3px 0.3px 0.3px black;*/
   transition: transform 0.3s ease-in-out;
   box-sizing: border-box;
   margin-bottom: 16px;
@@ -100,10 +101,7 @@
   }
 }
 @media (min-width: 601px) {
-  .productList {
-    grid-template-columns: repeat(5, 1fr);
-    padding: 12px;
-  }
+
   .card {
     width: 100%;
   }

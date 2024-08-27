@@ -10,6 +10,7 @@
   align-items: flex-start; /* Asegúrate de empezar desde arriba */
   z-index: 1000;
 }
+
 .modalContent {
   background-color: #1D1D1B;
   padding: 20px;
@@ -20,9 +21,9 @@
   font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   border: none;
-  border-radius: .5rem;
-  animation: slideIn 1s forwards, slideOut 1s 2s forwards; /* Ajustar la duración de la animación */
+  animation: slideIn 1s forwards, slideOut 1s 3s forwards; /* Ajustar la duración de la animación */
 }
+
 @keyframes slideIn {
   from {
     transform: translateY(-100%);
@@ -31,6 +32,7 @@
     transform: translateY(0);
   }
 }
+
 @keyframes slideOut {
   from {
     transform: translateY(0);
@@ -39,12 +41,14 @@
     transform: translateY(-100%);
   }
 }
+
 .modalInner {
   display: flex;
-  align-items: center; 
+  align-items: center; /* Alinea verticalmente la imagen y el texto */
 }
+
 .modalImage {
   width: 40px;
   height: 40px;
-  margin-right: 10px; 
+  margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
